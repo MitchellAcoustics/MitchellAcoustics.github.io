@@ -2,25 +2,12 @@
 title: "Open Source Papers (with code)"
 listing:
   - id: papers
-    contents: "papers/**/!(notebooks)/**.{qmd,ipynb}" # excludes notebooks
-    sort: "date desc"
-    type: default
-    grid-columns: 2
-    categories: true
-    feed: true
-  - id : notebooks
-    contents: "papers/**/notebooks/*!(.out).ipynb"
+    contents: 
+     - "papers/**/!(notebooks)/**.{qmd,ipynb}" # excludes notebooks
+     - "papers/paper_links.yml"
     sort: "date desc"
     type: default
     grid-columns: 2
     categories: true
     feed: true
 ---
-
-::: {#papers}
-:::
-
-## Notebooks
-
-::: {#notebooks}
-:::
