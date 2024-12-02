@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,12 +36,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-05fe91a66cf75bbbb8c9664867fe5124.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-05fe91a66cf75bbbb8c9664867fe5124.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-35b294675be951bc189e112138e257fb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-3524c82f7084742047229edd9ddeb61a.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -179,6 +179,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#landscape-architecture" id="toc-landscape-architecture" class="nav-link" data-scroll-target="#landscape-architecture">Landscape Architecture</a></li>
   <li><a href="#history-and-sociology" id="toc-history-and-sociology" class="nav-link" data-scroll-target="#history-and-sociology">History and Sociology</a></li>
   </ul></li>
+  <li><a href="#open-research-ai-and-data-ethics" id="toc-open-research-ai-and-data-ethics" class="nav-link" data-scroll-target="#open-research-ai-and-data-ethics">Open Research, AI and Data Ethics</a></li>
   <li><a href="#statistics" id="toc-statistics" class="nav-link" data-scroll-target="#statistics">Statistics</a>
   <ul>
   <li><a href="#multilevel-modelling" id="toc-multilevel-modelling" class="nav-link" data-scroll-target="#multilevel-modelling">Multilevel Modelling</a></li>
@@ -254,6 +255,12 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://mitpress.mit.edu/9780262701068/"><em>The Soundscape of Modernity</em></a>, Emily Thompson (2004).</li>
 </ul>
 </section>
+</section>
+<section id="open-research-ai-and-data-ethics" class="level1">
+<h1>Open Research, AI and Data Ethics</h1>
+<ul>
+<li><a href="https://alan-turing-institute.github.io/turing-commons/">Turing Commons</a>, an online platform to support open dialogue and reflection about the responsible design, development, and deployment of data-driven technologies.</li>
+</ul>
 </section>
 <section id="statistics" class="level1">
 <h1>Statistics</h1>
@@ -517,8 +524,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -629,7 +634,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
