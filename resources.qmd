@@ -33,6 +33,10 @@ Urban Soundscape Studies pull from a wide range of disciplines, some less known 
   - *The Rest Is Just Noise:* [Sonic Appropriation and the UK Policing Bill](https://www.justnoisepod.com/1438372/8195656-sonic-appropriation-and-the-uk-policing-bill-with-edda-bild)
 - [*The Soundscape of Modernity*](https://mitpress.mit.edu/9780262701068/), Emily Thompson (2004).
 
+# Open Research, AI and Data Ethics
+
+- [Turing Commons](https://alan-turing-institute.github.io/turing-commons/), an online platform to support open dialogue and reflection about the responsible design, development, and deployment of data-driven technologies.
+
 # Statistics
 
 - [Statistical Modeling, Causal Inference, and Social Science](https://statmodeling.stat.columbia.edu/), blog from Andrew Gelman, mostly focussed on Bayesian and MLM methods.
