@@ -55,6 +55,7 @@ Urban Soundscape Studies pull from a wide range of disciplines, some less known 
 
 ## Teaching Statistics
 
+- [Data Viz resource list from Sam Csik](https://eds-240-data-viz.github.io/resources.html)
 - [Common statistical tests are linear models (or: how to teach stats)](https://lindeloev.github.io/tests-as-linear/#9_teaching_materials_and_a_course_outline), blog post by Jonas Kristoffer Lindeløv
 - [Statistical Thinking for the 21st Century](https://statsthinking21.github.io/statsthinking21-core-site/index.html), a great new textbook by Russel A. Poldrack which I have used as the primary resource for my new undergrad statistics course.
 - [Statistical analysis: (1) Plotting the data, (2) Constructing and fitting models, (3) Plotting data along with fitted models, (4) Further modeling and data collection](https://statmodeling.stat.columbia.edu/2023/02/11/statistical-analysis-1-plotting-the-data-2-constructing-and-fitting-models-3-plotting-data-along-with-fitted-models-4-further-modeling-and-data-collection/) and [Any graph should contain the seeds of its own destruction](https://statmodeling.stat.columbia.edu/2021/05/06/any-graph-should-contain-the-seeds-of-its-own-destruction/), blog posts from Andrew Gelman on the statistical modeling workflow
