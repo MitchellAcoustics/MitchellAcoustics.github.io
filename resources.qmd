@@ -44,6 +44,7 @@ Urban Soundscape Studies pull from a wide range of disciplines, some less known 
 # Statistics
 
 - [Statistical Modeling, Causal Inference, and Social Science](https://statmodeling.stat.columbia.edu/), blog from Andrew Gelman, mostly focussed on Bayesian and MLM methods.
+- [Michael Clark's blog](https://m-clark.github.io) has some fantastic resources, including in-depth tutorials on [Mixed Models in R](https://m-clark.github.io/mixed-models-with-R/), [Generative Additive Models](https://m-clark.github.io/generalized-additive-models/), [Practical Data Science](https://m-clark.github.io/data-processing-and-visualization/) and [more](https://m-clark.github.io/resources.html)!
 
 ## Multilevel Modelling
 
