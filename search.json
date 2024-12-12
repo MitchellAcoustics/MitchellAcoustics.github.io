@@ -387,6 +387,27 @@
     "text": "Research Software Engineering\n\nHappy Git and GitHub for the useR"
   },
   {
+    "objectID": "resources.html#multilevel-modelling",
+    "href": "resources.html#multilevel-modelling",
+    "title": "People and Resources Links",
+    "section": "Multilevel Modelling",
+    "text": "Multilevel Modelling\n\nMultilevel (Hierarchical) Modeling: What it can and cannot do. Gelman (2006). DOI: 10.1198/004017005000000661"
+  },
+  {
+    "objectID": "resources.html#generative-additive-models",
+    "href": "resources.html#generative-additive-models",
+    "title": "People and Resources Links",
+    "section": "Generative Additive Models",
+    "text": "Generative Additive Models\n\nGAMs in R: A Free, Interactive Course using mgcv by Noam Ross"
+  },
+  {
+    "objectID": "resources.html#teaching-statistics",
+    "href": "resources.html#teaching-statistics",
+    "title": "People and Resources Links",
+    "section": "Teaching Statistics",
+    "text": "Teaching Statistics\n\nData Viz resource list from Sam Csik\nCommon statistical tests are linear models (or: how to teach stats), blog post by Jonas Kristoffer Lindeløv\nStatistical Thinking for the 21st Century, a great new textbook by Russel A. Poldrack which I have used as the primary resource for my new undergrad statistics course.\nStatistical analysis: (1) Plotting the data, (2) Constructing and fitting models, (3) Plotting data along with fitted models, (4) Further modeling and data collection and Any graph should contain the seeds of its own destruction, blog posts from Andrew Gelman on the statistical modeling workflow"
+  },
+  {
     "objectID": "resources.html#general-resources",
     "href": "resources.html#general-resources",
     "title": "People and Resources Links",
@@ -413,27 +434,6 @@
     "title": "People and Resources Links",
     "section": "History and Sociology",
     "text": "History and Sociology\n\nDr Edda Bild\n\nConsidering Sound in Planning and Designing Public Spaces: A review of theory and applications and a proposed framework for integrating research and practice, Journal of Planning Literature (2016). DOI: 10.1177/0885412216662001.\nSound as City Maker: Developing participatory collaborative process to work with sound as an urban resource. The case of Mr Visserplein (Amsterdam, NL). The Bloomsbury Handbook of Sonic Methodologies (2020). ISBN: 9781501338779\nThe Rest Is Just Noise: Sonic Appropriation and the UK Policing Bill\n\nThe Soundscape of Modernity, Emily Thompson (2004)."
-  },
-  {
-    "objectID": "resources.html#multilevel-modelling",
-    "href": "resources.html#multilevel-modelling",
-    "title": "People and Resources Links",
-    "section": "Multilevel Modelling",
-    "text": "Multilevel Modelling\n\nMultilevel (Hierarchical) Modeling: What it can and cannot do. Gelman (2006). DOI: 10.1198/004017005000000661"
-  },
-  {
-    "objectID": "resources.html#generative-additive-models",
-    "href": "resources.html#generative-additive-models",
-    "title": "People and Resources Links",
-    "section": "Generative Additive Models",
-    "text": "Generative Additive Models\n\nGAMs in R: A Free, Interactive Course using mgcv by Noam Ross"
-  },
-  {
-    "objectID": "resources.html#teaching-statistics",
-    "href": "resources.html#teaching-statistics",
-    "title": "People and Resources Links",
-    "section": "Teaching Statistics",
-    "text": "Teaching Statistics\n\nData Viz resource list from Sam Csik\nCommon statistical tests are linear models (or: how to teach stats), blog post by Jonas Kristoffer Lindeløv\nStatistical Thinking for the 21st Century, a great new textbook by Russel A. Poldrack which I have used as the primary resource for my new undergrad statistics course.\nStatistical analysis: (1) Plotting the data, (2) Constructing and fitting models, (3) Plotting data along with fitted models, (4) Further modeling and data collection and Any graph should contain the seeds of its own destruction, blog posts from Andrew Gelman on the statistical modeling workflow"
   },
   {
     "objectID": "resources.html#footnotes",
