@@ -8,6 +8,7 @@ This is my general repository of resources and people I find myself using or rep
 # Open Research, AI and Data Ethics
 
 - [Turing Commons](https://alan-turing-institute.github.io/turing-commons/), an online platform to support open dialogue and reflection about the responsible design, development, and deployment of data-driven technologies.
+- [rOpenSci](https://ropensci.org)
 
 ## Research Software Engineering
 
