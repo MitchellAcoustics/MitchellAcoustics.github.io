@@ -9,8 +9,18 @@
 <link>https://drandrewmitchell.com/research/presentations.html</link>
 <atom:link href="https://drandrewmitchell.com/research/presentations.xml" rel="self" type="application/rss+xml"/>
 <description>Personal website of Andrew Mitchell</description>
-<generator>quarto-1.6.39</generator>
-<lastBuildDate>Wed, 15 May 2024 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.6.40</generator>
+<lastBuildDate>Thu, 23 Jan 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title></title>
+  <dc:creator>Andrew Mitchell</dc:creator>
+  <link>https://drandrewmitchell.com/research/presentations/2025_ggplot2-Grammar-Graphics/</link>
+  <description><![CDATA[ undefined ]]></description>
+  <category>lecture</category>
+  <guid>https://drandrewmitchell.com/research/presentations/2025_ggplot2-Grammar-Graphics/</guid>
+  <pubDate>Thu, 23 Jan 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://stat20.berkeley.edu/fall-2024/2-summarizing-data/03-a-grammar-of-graphics/images/plot-collage.png" medium="image" type="image/png"/>
+</item>
 <item>
   <title>ASA 2024 Ottawa: Soundscape Perception Indices (SPI)</title>
   <dc:creator>Andrew Mitchell</dc:creator>
