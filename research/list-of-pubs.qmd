@@ -13,17 +13,19 @@ freeze: auto
 You can download my PhD Thesis, titled [*Predictive Modelling of Complex Urban Soundscapes: Enabling an engineeering approach to soundscape design*](./Andrew%20Mitchell%20PhD%20Thesis%20Final.pdf).
 
 ```{python}
-#| warning: false
-#| output: false
+# | warning: false
+# | output: false
 import yaml
 from bib2yaml import bib2yaml
 from IPython.display import display, Markdown, HTML
 
+
 def readable_list(_s):
-  if len(_s) < 3:
-    return ' and '.join(map(str, _s))
-  *a, b = _s
-  return f"{', '.join(map(str, a))}, and {b}"
+    if len(_s) < 3:
+        return " and ".join(map(str, _s))
+    *a, b = _s
+    return f"{', '.join(map(str, a))}, and {b}"
+
 
 def button(url, str, icon):
     icon_base = icon[:2]
@@ -32,103 +34,128 @@ def button(url, str, icon):
         {str}
     </a>"""
 
-def get_authors(author_str: str):
-    authors = author_str.split(" and ")
-    authors = [aut.strip() for aut in authors]
+
+def get_authors(author_str: list[dict]):
     try:
-        authors = [f"{aut.split(',')[1].strip()} {aut.split(',')[0].strip()}" for aut in authors]
+        authors = [f"{aut['given']} {aut['family']}" for aut in author_str]
     except:
         pass
     return authors
+
 
 def doi_badge(doi_str: str):
     return f'<span class="__dimensions_badge_embed__" data-doi={doi_str} data-hide-zero-citations="true" data-style="small_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>'
 
 
-bib2yaml("MitchellPublications.bib", "./", "publications")
-
 me = "Andrew Mitchell"
-yaml_data = yaml.safe_load(open("publications.yml"))
+yaml_data = yaml.safe_load(open("MitchellPublications.yaml"))
 pub_strs = {"pubs": {}, "confs": {}, "others": {}}
-for data in yaml_data:
-    title_str = data["title"]
-    entry_type = data.get("ENTRYTYPE")
-    authors = get_authors(data["author"])
-    authors = [aut if aut != me else "<strong>Andrew Mitchell</strong>" for aut in authors]
-    if len(authors) > 6: 
-        authors = authors[:6]
-        authors.append("et. al")
-    author_str = readable_list(authors)
-    year_str = data["year"]
 
-    buttons = []
-    preprint = data.get("preprint")
-    if preprint is not None:
-        buttons.append(button(preprint, "Preprint", "bi-file-earmark-pdf"))
+excepts = {}
+for data in yaml_data["references"]:
+    try:
+        title_str = data["title"]
+        entry_type = data.get("type")
+        authors = get_authors(data["author"])
+        authors = [
+            aut if aut != me else "<strong>Andrew Mitchell</strong>" for aut in authors
+        ]
+        if len(authors) > 6:
+            authors = authors[:6]
+            authors.append("et. al")
+        author_str = readable_list(authors)
 
-    github = data.get("github")
-    if github is not None:
-        buttons.append(button(github, "Github", "bi-github"))
+        year_str = data["issued"][0]["year"]
 
-    pub_doi = data.get("doi")
-    pub_url = data.get("url")
-    conf_title = data.get("booktitle")
-    journal = data.get("journal", data.get("journaltitle"))
-    publisher = data.get("publisher")
-    # venue = data.get("venue")
-    journal_pub = entry_type == 'article'
-    conf_pub = entry_type == 'inproceedings' 
-    
-    pub_str = f'{author_str}. ({year_str}) "{title_str}."'
+        buttons = []
+        preprint = data.get("preprint")
+        if preprint is not None:
+            buttons.append(button(preprint, "Preprint", "bi-file-earmark-pdf"))
 
-    if journal is not None:
-        pub_str += f" <em>{journal}</em>"
-    elif publisher is not None:
-        pub_str += f" <em>{publisher}</em>"
+        github = data.get("github")
+        if github is not None:
+            buttons.append(button(github, "Github", "bi-github"))
 
-    if conf_title is not None:
-        pub_str += f" In <em>{conf_title}</em>"
+        pub_doi = data.get("DOI")
+        pub_url = data.get("URL")
+        conf_title = data.get("container-title")
+        journal = data.get("journal", data.get("container-title"))
+        publisher = data.get("publisher")
+        # venue = data.get("venue")
+        journal_pub = entry_type == "article-journal"
+        conf_pub = entry_type == "paper-conference"
 
-    if pub_doi is not None:
-        pub_str += f" doi: {pub_doi} "
+        pub_str = f'{author_str}. ({year_str}) "{title_str}."'
 
-    if journal_pub:
-        if year_str not in pub_strs["pubs"]:
-            pub_strs["pubs"][year_str] = []
+        if journal is not None:
+            pub_str += f" <em>{journal}</em>"
+        elif publisher is not None:
+            pub_str += f" <em>{publisher}</em>"
+
+        if conf_title is not None:
+            pub_str += f" In <em>{conf_title}</em>"
+
         if pub_doi is not None:
-            buttons.append(button(f"https://doi.org/{pub_doi}", "Published", "bi-journal-text"))
-            buttons.append(doi_badge(pub_doi))
-        elif pub_url is not None:
-            buttons.append(button(pub_url, "Published", "bi-journal-text"))
+            pub_str += f" doi: {pub_doi} "
 
-        pub_strs["pubs"][year_str].append(
-            "<li class='list-group-item'>" + pub_str + "<br>" + " ".join(buttons) + "</li>"
-        )
+        if journal_pub:
+            if year_str not in pub_strs["pubs"]:
+                pub_strs["pubs"][year_str] = []
+            if pub_doi is not None:
+                buttons.append(
+                    button(f"https://doi.org/{pub_doi}", "Published", "bi-journal-text")
+                )
+                buttons.append(doi_badge(pub_doi))
+            elif pub_url is not None:
+                buttons.append(button(pub_url, "Published", "bi-journal-text"))
 
-    elif conf_pub:
-        if year_str not in pub_strs["confs"]:
-            pub_strs["confs"][year_str] = []
-        if pub_doi is not None:
-            buttons.append(button(f"https://doi.org/{pub_doi}", "Published", "bi-journal-text"))
-            buttons.append(doi_badge(pub_doi))
+            pub_strs["pubs"][year_str].append(
+                "<li class='list-group-item'>"
+                + pub_str
+                + "<br>"
+                + " ".join(buttons)
+                + "</li>"
+            )
 
-        elif pub_url is not None:
-            buttons.append(button(pub_url, "Published", "bi-journal-text"))
-        pub_strs["confs"][year_str].append(
-            "<li class='list-group-item'>" + pub_str + "<br>" + " ".join(buttons) + "</li>"
-        )
-    else:
-        if year_str not in pub_strs["others"]:
-            pub_strs["others"][year_str] = []
-        if pub_doi is not None:
-            buttons.append(button(f"https://doi.org/{pub_doi}", "Published", "bi-journal-text"))
-            buttons.append(doi_badge(pub_doi))
+        elif conf_pub:
+            if year_str not in pub_strs["confs"]:
+                pub_strs["confs"][year_str] = []
+            if pub_doi is not None:
+                buttons.append(
+                    button(f"https://doi.org/{pub_doi}", "Published", "bi-journal-text")
+                )
+                buttons.append(doi_badge(pub_doi))
 
-        elif pub_url is not None:
-            buttons.append(button(pub_url, "Published", "bi-journal-text"))
-        pub_strs["others"][year_str].append(
-            "<li class='list-group-item'>" + pub_str + "<br>" + " ".join(buttons) + "</li>"
-        )
+            elif pub_url is not None:
+                buttons.append(button(pub_url, "Published", "bi-journal-text"))
+            pub_strs["confs"][year_str].append(
+                "<li class='list-group-item'>"
+                + pub_str
+                + "<br>"
+                + " ".join(buttons)
+                + "</li>"
+            )
+        else:
+            if year_str not in pub_strs["others"]:
+                pub_strs["others"][year_str] = []
+            if pub_doi is not None:
+                buttons.append(
+                    button(f"https://doi.org/{pub_doi}", "Published", "bi-journal-text")
+                )
+                buttons.append(doi_badge(pub_doi))
+
+            elif pub_url is not None:
+                buttons.append(button(pub_url, "Published", "bi-journal-text"))
+            pub_strs["others"][year_str].append(
+                "<li class='list-group-item'>"
+                + pub_str
+                + "<br>"
+                + " ".join(buttons)
+                + "</li>"
+            )
+    except Exception as e:
+        excepts[data["id"]] = e
+
 
 ```
 
@@ -170,3 +197,20 @@ for year in sorted(pub_strs["others"].keys(), reverse=True):
         "<ul class='list-group list-group-flush'>" + '\n'.join(pub_strs["others"][year]) + "</ul>"
     ))
 ```
+
+::: {.content-hidden when-profile="production"}
+
+```{python}
+if len(excepts) > 0:
+    display(
+        Markdown(
+            "::: {.callout-warning collapse='true'}\n"
+            "### Exceptions\n"
+            f"{len(excepts)} exceptions occurred while processing the data.\n\n"
+            f"{excepts}\n"
+            ":::"
+        )
+    )
+```
+
+:::

@@ -12,7 +12,7 @@ website:
   repo-url: https://github.com/MitchellAcoustics/quarto-website
   # google-analytics: "G-Y7YLFF5F90"
   open-graph: true
-  favicon: favicon.png
+  # favicon: favicon.png
   twitter-card: 
     creator: "@acousticsman"
     site: "@acousticsman"
@@ -68,4 +68,4 @@ format:
     smooth-scroll: true
 
 render: 
-  freeze: true
+  freeze: auto

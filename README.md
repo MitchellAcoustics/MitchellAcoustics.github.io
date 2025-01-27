@@ -16,3 +16,11 @@ This project uses `venv` for python environment management. To install the requi
 source .venv/bin/activate
 pip install -r requirements.txt # or ideally, uv pip install -r requirements.txt
 ```
+
+## Building the website
+
+To build the website, run the following command:
+
+```bash
+quarto render --profile production
+```

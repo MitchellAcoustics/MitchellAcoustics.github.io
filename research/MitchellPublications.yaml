@@ -1,0 +1,2522 @@
+---
+references:
+- id: Aletta2019Associations
+  abstract: >-
+    Background Previous studies, mainly conducted in laboratory experiments,
+    showed there are associations between the perception of acoustic
+    environments (ie, soundscapes, as per the International Organization for
+    Standardization [ISO] 12913-1:2014 definition) and measures of individual
+    health and wellbeing. The aim of this study was to confirm these findings in
+    more ecologically realistic settings, by exploring associations between
+    soundscapes and wellbeing via a questionnaire campaign.
+  author:
+    - family: Aletta
+      given: Francesco
+    - family: Oberman
+      given: Tin
+    - family: Mitchell
+      given: Andrew
+    - family: Erfanian
+      given: Mercede
+    - family: Lionello
+      given: Matteo
+    - family: Kachlicka
+      given: Magdalena
+    - family: Kang
+      given: Jian
+  citation-key: Aletta2019Associations
+  container-title: The Lancet
+  DOI: 10.1016/s0140-6736(19)32814-4
+  ISSN: 0140-6736
+  issued:
+    - year: 2019
+      month: 11
+  note: |-
+    15 citations (Crossref/DOI) [2024-12-14]
+    15 citations (Crossref/DOI) [2024-12-14]
+  page: S17
+  publisher: Elsevier BV
+  title: >-
+    Associations between soundscape experience and self-reported wellbeing in
+    open public urban spaces: A field study
+  type: article-journal
+  volume: '394'
+
+- id: Aletta2020Assessing
+  abstract: >-
+    The implementation of lockdown measures due to the COVID-19 outbreak has
+    resulted in wide-ranging social and environmental implications. Among the
+    environmental impacts is a decrease in urban noise levels which has so far
+    been observed at the city scale via noise mapping efforts conducted through
+    the framework of the Environmental Noise Directive. This study aims to
+    understand how lockdown measures have manifested at a local level to better
+    determine how the person-level experience of the urban soundscape has been
+    affected and how these affects differ across urban space typologies. Taking
+    London as a case study, a series of 30-second binaural recordings were taken
+    at 11 locations representing a cross-section of urban public spaces with
+    varying compositions of sound sources during Spring 2019 (pre-lockdown, N =
+    620) and Spring 2020 (during-lockdown, N = 481). Five acoustic and
+    psychoacoustic metrics (LAeq, LA10, LA90, Loudness, Sharpness) were
+    calculated for each recording and their changes from the pre-lockdown
+    scenario to the lockdown scenario are investigated. Clustering analysis was
+    performed which grouped the locations into 3 types of urban settings based
+    on their acoustic characteristics. An average reduction of 5.4 dB (LAeq) was
+    observed, however significant differences in the degree of reduction were
+    found across the locations, ranging from a 10.7 dB to a 1.2 dB reduction.
+    This study confirms the general reduction in noise levels due to the
+    nationally imposed lockdown measures, identifies trends which vary depending
+    on the urban context and discusses the implications for the limits of urban
+    noise reduction.
+  author:
+    - family: Aletta
+      given: Francesco
+    - family: Oberman
+      given: Tin
+    - family: Mitchell
+      given: Andrew
+    - family: Tong
+      given: Huan
+    - family: Kang
+      given: Jian
+  citation-key: Aletta2020Assessing
+  container-title: Noise Mapping
+  container-title-short: Noise Mapp.
+  DOI: 10.1515/noise-2020-0011
+  ISSN: 2084-879X
+  issue: '1'
+  issued:
+    - year: 2020
+      month: 1
+  license: All rights reserved
+  note: |-
+    115 citations (Crossref/DOI) [2024-12-14]
+    115 citations (Crossref/DOI) [2024-12-14]
+  page: 123–134
+  publisher: Walter de Gruyter GmbH
+  title: >-
+    Assessing the changing urban sound environment during the COVID-19 lockdown
+    period using short-term acoustic measurements
+  type: article-journal
+  URL: https://www.degruyter.com/view/journals/noise/7/1/article-p123.xml
+  volume: '7'
+
+- id: Aletta2023Soundscape
+  abstract: >-
+    The influence of cultural background on the soundscape experience in public
+    spaces has been widely acknowledged. However, most studies have not used
+    standardized protocols for soundscape perception data collection, nor have
+    they gathered large datasets across different regions of the world to
+    investigate possible cultural differences. This study explored the
+    relationships between soundscape descriptors, perceived dominance of sound
+    sources, and overall soundscape qualities and whether these relationships
+    differ across world regions. A database of over 2000 soundscape surveys was
+    collected in situ in outdoor public spaces in Europe and China. Results
+    highlighted differences in how European and Chinese participants perceived
+    the pleasantness and dominance of different sound sources. Specifically, the
+    positive correlation between perceived pleasantness and natural sounds was
+    stronger for European participants. For Chinese participants, vibrant
+    soundscapes were positively correlated with perceived dominance of natural
+    sounds, whereas in Europe, they were associated more with human-generated
+    sounds. Perceived loudness had a greater effect on the appropriateness
+    dimension for the Chinese sample than that for the European sample. This
+    study provides a deeper understanding of how the geographical/cultural
+    context can influence soundscape perception in public spaces and suggests
+    that such country-specific factors should be considered when designing urban
+    soundscapes.
+  accessed:
+    - year: 2024
+      month: 12
+      day: 12
+  author:
+    - family: Aletta
+      given: Francesco
+    - family: Oberman
+      given: Tin
+    - family: Mitchell
+      given: Andrew
+    - family: Erfanian
+      given: Mercede
+    - family: Kang
+      given: Jian
+  citation-key: Aletta2023Soundscape
+  container-title: Journal of the Acoustical Society of America
+  container-title-short: J. Acoust. Soc. Am.
+  DOI: 10.1121/10.0020842
+  ISSN: 0001-4966
+  issue: '3'
+  issued:
+    - year: 2023
+      month: 9
+      day: 15
+  language: en
+  note: |-
+    9 citations (Crossref/DOI) [2024-12-14]
+    9 citations (Crossref/DOI) [2024-12-14]
+  page: 1710-1734
+  source: Silverchair
+  title: >-
+    Soundscape experience of public spaces in different world regions: a
+    comparison between the european and chinese contexts via a large-scale
+    on-site surveya)
+  title-short: Soundscape experience of public spaces in different world regions
+  type: article-journal
+  URL: https://doi.org/10.1121/10.0020842
+  volume: '154'
+
+- id: Aletta2024Soundscape
+  abstract: >-
+    This paper presents the outcomes of the “Soundscape Attributes Translation
+    Project” (SATP), an international initiative addressing the critical
+    research gap in soundscape descriptors translations for cross-cultural
+    studies. Focusing on eighteen languages – namely: Arabic, Chinese, Croatian,
+    Dutch, English, French, German, Greek, Indonesian, Italian, Japanese,
+    Korean, Malay, Portuguese, Spanish, Swedish, Turkish, and Vietnamese – the
+    study employs a four-step procedure to evaluate the reliability and
+    cross-cultural validity of translated soundscape descriptors. The study
+    introduces a three-tier confidence level system (Low, Medium, High) based on
+    “adjusted angles”, which are a measure proposed to correct the soundscape
+    circumplex model (i.e., the pleasant-eventful space proposed in the ISO
+    12913 series) of a given language. Results reveal that most languages
+    successfully maintain the quasi-circumplex structure of the original
+    soundscape model, ensuring robust cross-cultural validity. English, Arabic,
+    Chinese (Mandarin), Croatian, Dutch, German, Greek, Indonesian, Italian,
+    Spanish, Swedish, and Turkish achieve a “High” confidence level. French,
+    Japanese, Korean, Malay, Portuguese, and Vietnamese demonstrate varying
+    confidence levels, highlighting the importance of the preliminary
+    translation. This research significantly contributes to standardized
+    cross-cultural methodologies in soundscape perception research, emphasizing
+    the pivotal role of adjusted angles within the soundscape circumplex model
+    in ensuring the accuracy of dimensions (i.e., attributes) locations. The
+    SATP initiative offers insights into the complex interplay of language and
+    meaning in the perception of environmental sounds, opening avenues for
+    further cross-cultural soundscape research.
+  accessed:
+    - year: 2024
+      month: 12
+      day: 11
+  author:
+    - family: Aletta
+      given: Francesco
+    - family: Mitchell
+      given: Andrew
+    - family: Oberman
+      given: Tin
+    - family: Kang
+      given: Jian
+    - family: Khelil
+      given: Sara
+    - family: Bouzir
+      given: Tallal Abdel Karim
+    - family: Berkouk
+      given: Djihed
+    - family: Xie
+      given: Hui
+    - family: Zhang
+      given: Yuan
+    - family: Zhang
+      given: Ruining
+    - family: Yang
+      given: Xinhao
+    - family: Li
+      given: Min
+    - family: Jambrošić
+      given: Kristian
+    - family: Zaninović
+      given: Tamara
+    - family: Bosch
+      given: Kirsten
+      non-dropping-particle: van den
+    - family: Lühr
+      given: Tamara
+    - family: Orlik
+      given: Nicolas
+    - family: Fitzpatrick
+      given: Darragh
+    - family: Sarampalis
+      given: Anastasios
+    - family: Aumond
+      given: Pierre
+    - family: Lavandier
+      given: Catherine
+    - family: Moshona
+      given: Cleopatra Christina
+    - family: Lepa
+      given: Steffen
+    - family: Fiebig
+      given: André
+    - family: Papadakis
+      given: Nikolaos M.
+    - family: Stavroulakis
+      given: Georgios E.
+    - family: Sudarsono
+      given: Anugrah Sabdono
+    - family: Sarwono
+      given: Sugeng Joko
+    - family: Puglisi
+      given: Giuseppina Emma
+    - family: Jafari
+      given: Farid
+    - family: Astolfi
+      given: Arianna
+    - family: Shtrepi
+      given: Louena
+    - family: Nagahata
+      given: Koji
+    - family: Jo
+      given: Hyun In
+    - family: Jeon
+      given: Jin Yong
+    - family: Lam
+      given: Bhan
+    - family: Chieng
+      given: Julia
+    - family: Ooi
+      given: Kenneth
+    - family: Hong
+      given: Joo Young
+    - family: Monteiro Antunes
+      given: Sónia
+    - family: Alves
+      given: Sonia
+    - family: Ulhoa Carvalho
+      given: Maria Luiza
+      non-dropping-particle: de
+    - family: Michalski
+      given: Ranny Loureiro Xavier Nascimento
+    - family: Kogan
+      given: Pablo
+    - family: Vida Manzano
+      given: Jerónimo
+    - family: García Quesada
+      given: Rafael
+    - family: Suárez Silva
+      given: Enrique
+    - family: Almagro Pastor
+      given: José Antonio
+    - family: Nilsson
+      given: Mats E.
+    - family: Axelsson
+      given: Östen
+    - family: Gan
+      given: Woon-Seng
+    - family: Watcharasupat
+      given: Karn N.
+    - family: Jaratjarungkiat
+      given: Sureenate
+    - family: Ong
+      given: Zhen-Ting
+    - family: Dökmeci Yörükoğlu
+      given: Papatya Nur
+    - family: Erçakmak Osma
+      given: Uğur Beyza
+    - family: Nguyen
+      given: Thu Lan
+  citation-key: Aletta2024Soundscape
+  container-title: Applied Acoustics
+  container-title-short: Appl. Acoust.
+  DOI: 10.1016/j.apacoust.2024.110109
+  ISSN: 0003-682X
+  issued:
+    - year: 2024
+      month: 9
+      day: 5
+  language: en
+  note: |-
+    4 citations (Crossref/DOI) [2024-12-14]
+    4 citations (Crossref/DOI) [2024-12-14]
+  page: '110109'
+  source: ScienceDirect
+  title: >-
+    Soundscape descriptors in eighteen languages: translation and validation
+    through listening experiments
+  title-short: Soundscape descriptors in eighteen languages
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S0003682X24002603
+  volume: '224'
+
+- id: Aletta2025Soundscape
+  accessed:
+    - year: 2024
+      month: 12
+      day: 11
+  author:
+    - family: Aletta
+      given: Francesco
+    - family: Astolfi
+      given: Arianna
+    - family: Kang
+      given: Jian
+    - family: Oberman
+      given: Tin
+    - family: Mitchell
+      given: Andrew
+  citation-key: Aletta2025Soundscape
+  container-title: Applied Acoustics
+  container-title-short: Appl. Acoust.
+  DOI: 10.1016/j.apacoust.2024.110305
+  ISSN: 0003-682X
+  issued:
+    - year: 2025
+      month: 1
+      day: 15
+  language: en
+  note: |-
+    0 citations (Crossref/DOI) [2024-12-14]
+    0 citations (Crossref/DOI) [2024-12-14]
+  page: '110305'
+  source: ScienceDirect
+  title: 'Soundscape attributes translation: current projects and challenges'
+  title-short: Soundscape attributes translation
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S0003682X24004560
+  volume: '228'
+
+- id: Chen2024Developing
+  abstract: >-
+    In recent decades, there has been a growing interest in urban soundscapes
+    and a shift towards a user-focused approach in urban sound environments.
+    Despite this interest, there is no comprehensive taxonomy for soundscape
+    design available. The Catalogue of Soundscape Interventions (CSI) project
+    aims to fill this gap by creating a tool to collect and share data on real
+    soundscape practices, with the goal of developing a design toolkit and brief
+    to facilitate communication between local authorities, consultants, and
+    researchers. An online platform has been launched to gather instances of
+    soundscape interventions. This paper proposes eight dimensions of soundscape
+    interventions and presents a taxonomy that categorizes these interventions
+    based on recurring strategies and goals observed in 43 practice cases
+    collected. These dimensions include stages, contributors, scale, period of
+    time, intervention types, public involvement, aims and purposes, and
+    approaches. As soundscape practices increase in complexity and variety, the
+    taxonomy can be revised and expanded. Nevertheless, the provided taxonomy
+    serves as an orientation aid for understanding, analyzing, and designing
+    soundscapes, leading to the development of more harmonious and contextually
+    appropriate acoustic environments.
+  accessed:
+    - year: 2024
+      month: 12
+      day: 12
+  author:
+    - family: Chen
+      given: Xiaochao
+    - family: Aletta
+      given: Francesco
+    - family: Moshona
+      given: Cleopatra Christina
+    - family: Fiebig
+      given: André
+    - family: Henze
+      given: Helen
+    - family: Kang
+      given: Jian
+    - family: Mitchell
+      given: Andrew
+    - family: Oberman
+      given: Tin
+    - family: Schulte-Fortkamp
+      given: Brigitte
+    - family: Tong
+      given: Huan
+  citation-key: Chen2024Developing
+  container-title: Acta Acustica
+  container-title-short: Acta Acust.
+  DOI: 10.1051/aacus/2024027
+  ISSN: 2681-4617
+  issued:
+    - year: 2024
+  language: en
+  license: © The Author(s), Published by EDP Sciences, 2024
+  note: >-
+    0 citations (Crossref/DOI) [2024-12-14]
+
+    0 citations (Crossref/DOI) [2024-12-14]
+
+    TLDR: This paper proposes eight dimensions of soundscape interventions and
+    presents a taxonomy that categorizes these interventions based on recurring
+    strategies and goals observed in 43 practice cases collected, leading to the
+    development of more harmonious and contextually appropriate acoustic
+    environments.
+  page: '29'
+  publisher: EDP Sciences
+  source: acta-acustica.edpsciences.org
+  title: >-
+    Developing a taxonomy of soundscape interventions from a catalogue of
+    real-world examples
+  type: article-journal
+  URL: >-
+    https://acta-acustica.edpsciences.org/articles/aacus/abs/2024/01/aacus230101/aacus230101.html
+  volume: '8'
+
+- id: Erfanian2019neurophysiology
+  author:
+    - family: Erfanian
+      given: Mercede
+    - family: Mitchell
+      given: Andrew
+    - family: Kang
+      given: Jian
+  citation-key: Erfanian2019neurophysiology
+  event-place: Brighton, United Kingdom
+  event-title: >-
+    The 6th European Conference on Psychology & the Behavioral Sciences
+    (ECP2019)
+  issued:
+    - year: 2019
+  language: en
+  page: '2'
+  publisher-place: Brighton, United Kingdom
+  source: Zotero
+  title: >-
+    The neurophysiology and physiology of soundscape: A review of the  empirical
+    literature
+  type: paper-conference
+  URL: >-
+    https://www.researchgate.net/publication/330988852_The_neurophysiology_and_physiology_of_soundscape_A_review_of_the_empirical_literature
+
+- id: Erfanian2019Psychophysiological
+  abstract: >-
+    The soundscape is deﬁned by the International Standard Organization (ISO)
+    12913-1 as the human’s perception of the acoustic environment, in context,
+    accompanying physiological and psychological responses. Previous research is
+    synthesized with studies designed to investigate soundscape at the
+    ‘unconscious’ level in an eﬀort to more speciﬁcally conceptualize biomarkers
+    of the soundscape. This review aims ﬁrstly, to investigate the consistency
+    of methodologies applied for the investigation of physiological aspects of
+    soundscape; secondly, to underline the feasibility of physiological markers
+    as biomarkers of soundscape; and ﬁnally, to explore the association between
+    the physiological responses and the well-founded psychological components of
+    the soundscape which are continually advancing. For this review, Web of
+    Science, PubMed, Scopus, and PsycINFO were searched for peer-reviewed
+    articles published in English with combinations of the keywords
+    ‘soundscape’, ‘environmental noise/sound’, ‘physiology/physiological’,
+    ‘psychology/psychological’, and ‘perceptual attributes/aﬀective/subjective
+    assessment/appraisals’. Previous research suggests that Electrocardiography
+    (ECG) and Vectorcardiography (VCG) biometrics quantifying Heart Rate (HR),
+    stimulus-locked experimental design, and passive listening with homogeneous
+    populations are predominantly applied to characterize the psychophysiology
+    underlying the soundscape. Pleasantness and arousal are the most frequent
+    psychological descriptors for soundscape subjective appraisals. Likewise,
+    acoustic environments are reported to inconsistently evoke physiological
+    responses with great variability among studies. The link between the
+    perceptual attributes and physiological responses of soundscape vary within
+    and among existing literature. While a few studies detected a link between
+    physiological manifestations of soundscape and the perceptual attributes,
+    the others failed to validate this link. Additionally, the majority of the
+    study ﬁndings were limited to one or two physiological responses.
+  accessed:
+    - year: 2022
+      month: 10
+      day: 22
+  author:
+    - family: Erfanian
+      given: Mercede
+    - family: Mitchell
+      given: Andrew
+    - family: Kang
+      given: Jian
+    - family: Aletta
+      given: Francesco
+  citation-key: Erfanian2019Psychophysiological
+  container-title: International Journal of Environmental Research and Public Health
+  container-title-short: IJERPH
+  DOI: 10.3390/ijerph16193533
+  ISSN: 1660-4601
+  issue: '19'
+  issued:
+    - year: 2019
+      month: 9
+      day: 21
+  language: en
+  note: >-
+    85 citations (Crossref/DOI) [2024-12-14]
+
+    85 citations (Crossref/DOI) [2024-12-14]
+
+    TLDR: This review aims to investigate the consistency of methodologies
+    applied for the investigation of physiological aspects of soundscape, to
+    underline the feasibility of physiological markers as biomarkers of sound
+    landscape, and to explore the association between the physiological
+    responses and the well-founded psychological components of the soundscape
+    which are continually advancing.
+  page: '3533'
+  source: DOI.org (Crossref)
+  title: >-
+    The Psychophysiological Implications of Soundscape: A Systematic Review of
+    Empirical Literature and a Research Agenda
+  title-short: The Psychophysiological Implications of Soundscape
+  type: article-journal
+  URL: https://www.mdpi.com/1660-4601/16/19/3533
+  volume: '16'
+
+- id: Erfanian2020Psychological
+  abstract: |-
+    Abstract
+              There is a great deal of literature on contributing environmental factors of soundscape, the perception of the acoustic environment by humans in context. Yet the impact of some contextual and person-related factors is largely unknown. From the questionnaire, adapted from ISO12913-2 and the WHO-5 well-being index, three questions arose: are there differences in Pleasantness and Eventfulness of soundscape among different acoustic environments; are high levels of psychological well-being associated with increased Pleasantness and Eventfulness ratings; and is soundscape Pleasantness and Eventfulness consistent among different age and gender groups? The sample comprised 1180 individual questionnaires, 621 females (52.6%), 532 males (45.1%), mean age 34.95 years ± 15.62, collected from eleven urban locations. Hierarchical clustering analysis was done on the mean of each sound source question for each survey location resulting in three clusters of locations based on sound source composition: Natural-dominant, Traffic-dominant and Mixed-sources. A Kruskal-Wallis was conducted to compare the mean Pleasantness and Eventfulness scores of the three clusters, demonstrating that the soundscape assessment was significantly different depending on sound source composition. Multiple linear regression models were used to analyse the relationship between psychological well-being, age, and gender with soundscape Pleasantness and Eventfulness. Our results indicated first that the positive psychological state was associated with Pleasantness in the all-locations and mixed-sources clusters, and with Eventfulness in the traffic-dominant cluster. Secondly, while age was linked to Pleasantness in all clusters it was merely associated with the Eventfulness in the all-locations cluster. Lastly, gender was associated with Pleasantness only in the all-locations cluster. These findings offer empirical grounds for developing theories of the contextual factors on soundscape.
+  accessed:
+    - year: 2021
+      month: 6
+      day: 9
+  author:
+    - family: Erfanian
+      given: Mercede
+    - family: Mitchell
+      given: Andrew
+    - family: Aletta
+      given: Francesco
+    - family: Kang
+      given: Jian
+  citation-key: Erfanian2020Psychological
+  DOI: 10.1101/2020.10.16.341834
+  issued:
+    - year: 2020
+      month: 10
+      day: 17
+  language: en
+  license: All rights reserved
+  source: DOI.org (Crossref)
+  title: >-
+    Psychological Well-being, Age and Gender can Mediate Soundscapes
+    Pleasantness and Eventfulness: A large sample study
+  title-short: >-
+    Psychological Well-being, Age and Gender can Mediate Soundscapes
+    Pleasantness and Eventfulness
+  type: article
+  URL: http://biorxiv.org/lookup/doi/10.1101/2020.10.16.341834
+
+- id: Erfanian2021Psychological
+  abstract: >-
+    Soundscape studies aim to consider the holistic human perception of a sound
+    environment, including both the physical phenomena and how these are
+    mediated by internal factors. This study aims to assess the influence of
+    psychological well-being and demographic factors including age, gender,
+    occupation status, and education levels on the dimensions of the soundscape
+    circumplex, i.e., Pleasantness and Eventfulness. Data was collected in
+    eleven urban locations in London through a large-scale (N = 1134) soundscape
+    survey according to the ISO 12913-2 technical specifications and
+    incorporating the WHO-5 well-being index. Linear mixed-effects modelling
+    applying backwards-step feature selection was used to model the interactions
+    between internal factors including psychological well-being, age, gender,
+    occupation status, education levels and the soundscape Pleasantness and
+    Eventfulness, while accounting for the random effects of the survey
+    location. The findings suggest that internal factors account for
+    approximately 1.4% of the variance for Pleasantness and 3.9% for
+    Eventfulness, while the influence of the locations accounted for
+    approximately 34% and 14%, respectively. Psychological well-being is
+    positively associated with perceived Pleasantness, while there is a negative
+    association with Eventfulness only for males. Occupation status, in
+    particular retirement as a proxy of age and gender, was identified as a
+    significant factor for both dimensions. These findings offer empirical
+    grounds for developing theories of the interaction between internal factors
+    and soundscape formation whilst highlighting the importance of the location,
+    namely: the context.
+  accessed:
+    - year: 2022
+      month: 10
+      day: 22
+  author:
+    - family: Erfanian
+      given: Mercede
+    - family: Mitchell
+      given: Andrew
+    - family: Aletta
+      given: Francesco
+    - family: Kang
+      given: Jian
+  citation-key: Erfanian2021Psychological
+  container-title: Journal of Environmental Psychology
+  container-title-short: Journal of Environmental Psychology
+  DOI: 10.1016/j.jenvp.2021.101660
+  ISSN: '02724944'
+  issued:
+    - year: 2021
+      month: 10
+  language: en
+  note: |-
+    45 citations (Crossref/DOI) [2024-12-14]
+    45 citations (Crossref/DOI) [2024-12-14]
+  page: '101660'
+  source: DOI.org (Crossref)
+  title: >-
+    Psychological well-being and demographic factors can mediate soundscape
+    pleasantness and eventfulness: A large sample study
+  title-short: >-
+    Psychological well-being and demographic factors can mediate soundscape
+    pleasantness and eventfulness
+  type: article-journal
+  URL: https://linkinghub.elsevier.com/retrieve/pii/S0272494421001134
+  volume: '77'
+
+- id: Fang2024Determining
+  abstract: >-
+    This study examines the association between appropriateness and the
+    pleasantness-eventfulness circumplex model, as well as the influencing
+    environmental and personal factors, in accordance with the recommended
+    questionnaire of ISO/TS 12913-2 (2018). A database was used, containing over
+    1000 soundscape surveys collected across eleven locations in London.
+    Confirmatory factor analysis and the structural summary method were applied
+    to validate the relationship between appropriateness and the
+    pleasantness-eventfulness circumplex model, while linear multilevel models
+    were developed to investigate the effect of personal and environmental
+    factors on appropriateness. The findings highlight varying relationship
+    between appropriateness and the pleasantness-eventfulness dimensions of the
+    soundscape circumplex model. The effect of personal factors on
+    appropriateness is not negligible, accounting for approximately 2.1% of the
+    variance. In contrast to the effects of the categories of landscape
+    composition and acoustic metrics, dominant sound source type is the most
+    influential category of environmental factors, with natural sounds
+    explaining the most variance at 6%. Traffic noise is negatively associated
+    with appropriateness which varies by location, while human sounds are
+    negatively associated with appropriateness when respondents were Asian/Asian
+    British. The findings provide empirical evidence of the relationship between
+    appropriateness and the soundscape circumplex model and offer comprehensive
+    insights into the affecting factors.
+  accessed:
+    - year: 2024
+      month: 12
+      day: 11
+  author:
+    - family: Fang
+      given: Xiang
+    - family: Aletta
+      given: Francesco
+    - family: Mitchell
+      given: Andrew
+    - family: Oberman
+      given: Tin
+    - family: Kang
+      given: Jian
+  citation-key: Fang2024Determining
+  container-title: Journal of the Acoustical Society of America
+  container-title-short: J. Acoust. Soc. Am.
+  DOI: 10.1121/10.0034418
+  ISSN: 0001-4966
+  issue: '5'
+  issued:
+    - year: 2024
+      month: 11
+      day: 26
+  language: en
+  note: |-
+    0 citations (Crossref/DOI) [2024-12-14]
+    0 citations (Crossref/DOI) [2024-12-14]
+  page: 3588-3607
+  source: Silverchair
+  title: >-
+    Determining factors for the appropriateness of soundscapes: a
+    cross-sectional large-sample study in London (UK)a)
+  title-short: Determining factors for the appropriateness of soundscapes
+  type: article-journal
+  URL: https://doi.org/10.1121/10.0034418
+  volume: '156'
+
+- id: HarvieClark2024Integrating
+  accessed:
+    - year: 2024
+      month: 12
+      day: 12
+  author:
+    - family: Harvie-Clark
+      given: J.
+    - family: Romeo Pitone
+      given: R.
+    - family: Pereira
+      given: L.
+    - family: Mitchell
+      given: Andrew
+  citation-key: HarvieClark2024Integrating
+  container-title: >-
+    Proceedings of the 10th Convention of the European Acoustics Association
+    Forum Acusticum 2023
+  container-title-short: Proc. 10th Conv. Eur. Acoust. Assoc. Forum Acusticum 2023
+  DOI: 10.61782/fa.2023.0918
+  event-place: Turin, Italy
+  event-title: 10th Convention of the European Acoustics Association Forum Acusticum 2023
+  ISBN: 978-88-88942-67-4
+  issued:
+    - year: 2024
+      month: 1
+      day: 17
+  language: en
+  note: |-
+    0 citations (Crossref/DOI) [2024-12-14]
+    0 citations (Crossref/DOI) [2024-12-14]
+  page: 2049-2056
+  publisher: European Acoustics Association
+  publisher-place: Turin, Italy
+  source: DOI.org (Crossref)
+  title: >-
+    Integrating acoustics engineering and soundscape design for an urban park: a
+    case study
+  title-short: Integrating acoustics engineering and soundscape design for an urban park
+  type: paper-conference
+  URL: https://dael.euracoustics.org/confs/landing_pages/fa2023/000918.html
+
+- id: Hou2023AIbased
+  abstract: >-
+    Soundscape studies typically attempt to capture the perception and
+    understanding of sonic environments by surveying users. However, for
+    long-term monitoring or assessing interventions, sound-signal-based
+    approaches are required. To this end, most previous research focused on
+    psycho-acoustic quantities or automatic sound recognition. Few attempts were
+    made to include appraisal (e.g., in circumplex frameworks). This paper
+    proposes an artificial intelligence (AI)-based dual-branch convolutional
+    neural network with cross-attention-based fusion (DCNN-CaF) to analyze
+    automatic soundscape characterization, including sound recognition and
+    appraisal. Using the DeLTA dataset containing human-annotated sound source
+    labels and perceived annoyance, the DCNN-CaF is proposed to perform sound
+    source classification (SSC) and human-perceived annoyance rating prediction
+    (ARP). Experimental findings indicate that (1) the proposed DCNN-CaF using
+    loudness and Mel features outperforms the DCNN-CaF using only one of them.
+    (2) The proposed DCNN-CaF with cross-attention fusion outperforms other
+    typical AI-based models and soundscape-related traditional machine learning
+    methods on the SSC and ARP tasks. (3) Correlation analysis reveals that the
+    relationship between sound sources and annoyance is similar for humans and
+    the proposed AI-based DCNN-CaF model. (4) Generalization tests show that the
+    proposed model's ARP in the presence of model-unknown sound sources is
+    consistent with expert expectations and can explain previous findings from
+    the literature on soundscape augmentation.
+  accessed:
+    - year: 2024
+      month: 12
+      day: 12
+  author:
+    - family: Hou
+      given: Yuanbo
+    - family: Ren
+      given: Qiaoqiao
+    - family: Zhang
+      given: Huizhong
+    - family: Mitchell
+      given: Andrew
+    - family: Aletta
+      given: Francesco
+    - family: Kang
+      given: Jian
+    - family: Botteldooren
+      given: Dick
+  citation-key: Hou2023AIbased
+  container-title: The Journal of the Acoustical Society of America
+  container-title-short: The Journal of the Acoustical Society of America
+  DOI: 10.1121/10.0022408
+  ISSN: 0001-4966
+  issue: '5'
+  issued:
+    - year: 2023
+      month: 11
+      day: 1
+  language: en
+  note: >-
+    5 citations (Crossref/DOI) [2024-12-14]
+
+    5 citations (Crossref/DOI) [2024-12-14]
+
+    TLDR: An artificial intelligence (AI)-based dual-branch convolutional neural
+    network with cross-attention-based fusion (DCNN-CaF) to analyze automatic
+    soundscape characterization, including sound recognition and appraisal is
+    proposed.
+  page: 3145-3157
+  source: Silverchair
+  title: >-
+    AI-based soundscape analysis: Jointly identifying sound sources and
+    predicting annoyance
+  title-short: AI-based soundscape analysis
+  type: article-journal
+  URL: https://doi.org/10.1121/10.0022408
+  volume: '154'
+
+- id: Hou2023Exploring
+  author:
+    - family: Hou
+      given: Yuanbo
+    - family: Mitchell
+      given: Andrew
+    - family: Ren
+      given: Qiaoqiao
+    - family: Aletta
+      given: Francesco
+    - family: Kang
+      given: Jian
+    - family: Botteldooren
+      given: Dick
+  citation-key: Hou2023Exploring
+  container-title: Forum Acusticum 2023
+  event-place: Turin
+  issued:
+    - year: 2023
+      month: 9
+  publisher-place: Turin
+  title: >-
+    Exploring annoyance in a soundscape context by joint prediction of sound
+    source and annoyance
+  type: paper-conference
+
+- id: Hou2023Joint
+  accessed:
+    - year: 2024
+      month: 12
+      day: 12
+  author:
+    - family: Hou
+      given: Yuanbo
+    - family: Song
+      given: Siyang
+    - family: Luo
+      given: Cheng
+    - family: Mitchell
+      given: Andrew
+    - family: Ren
+      given: Qiaoqiao
+    - family: Xie
+      given: Weicheng
+    - family: Kang
+      given: Jian
+    - family: Wang
+      given: Wenwu
+    - family: Botteldooren
+      given: Dick
+  citation-key: Hou2023Joint
+  container-title: INTERSPEECH 2023
+  DOI: 10.21437/Interspeech.2023-1021
+  event-place: Dublin
+  event-title: INTERSPEECH 2023
+  issued:
+    - year: 2023
+      month: 8
+      day: 20
+  language: en
+  note: >-
+    2 citations (Crossref/DOI) [2024-12-14]
+
+    2 citations (Crossref/DOI) [2024-12-14]
+
+    TLDR: Experiments show the proposed HGRL successfully integrates AE with AR
+    for AEC and ARP tasks, while coordinating the relations between cAE and fAE
+    and further aligning the two different grains of AE information with the AR.
+  page: 331-335
+  publisher: ISCA
+  publisher-place: Dublin
+  source: DOI.org (Crossref)
+  title: >-
+    Joint Prediction of Audio Event and Annoyance Rating in an Urban Soundscape
+    by Hierarchical Graph Representation Learning
+  type: paper-conference
+  URL: https://www.isca-archive.org/interspeech_2023/hou23_interspeech.html
+
+- id: Hou2024Cooperative
+  abstract: >-
+    Acoustic scene classification (ASC) can be helpful for creating context
+    awareness for intelligent robots. Humans naturally use the relations between
+    acoustic scenes (AS) and audio events (AE) to understand and recognize their
+    surrounding environments. However, in most previous works, ASC and audio
+    event classification (AEC) are treated as independent tasks, with a focus
+    primarily on audio features shared between scenes and events, but not their
+    implicit relations. To address this limitation, we propose a cooperative
+    scene-event modelling (cSEM) framework to automatically model the intricate
+    scene-event relation by an adaptive coupling matrix to improve ASC. Compared
+    with other scene-event modelling frameworks, the proposed cSEM offers the
+    following advantages. First, it reduces the confusion between similar scenes
+    by aligning the information of coarse-grained AS and fine-grained AE in the
+    latent space, and reducing the redundant information between the AS and AE
+    embeddings. Second, it exploits the relation information between AS and AE
+    to improve ASC, which is shown to be beneficial, even if the information of
+    AE is derived from unverified pseudo-labels. Third, it uses a
+    regression-based loss function for cooperative modelling of scene-event
+    relations, which is shown to be more effective than classification-based
+    loss functions. Instantiated from four models based on either Transformer or
+    convolutional neural networks, cSEM is evaluated on real-life and synthetic
+    datasets. Experiments show that cSEM-based models work well in real-life
+    scene-event analysis, offering competitive results on ASC as compared with
+    other multi-feature or multi-model ensemble methods. The ASC accuracy
+    achieved on the TUT2018, TAU2019, and JSSED datasets is 81.0%, 88.9% and
+    97.2%, respectively.
+  accessed:
+    - year: 2024
+      month: 12
+      day: 12
+  author:
+    - family: Hou
+      given: Yuanbo
+    - family: Kang
+      given: Bo
+    - family: Mitchell
+      given: Andrew
+    - family: Wang
+      given: Wenwu
+    - family: Kang
+      given: Jian
+    - family: Botteldooren
+      given: Dick
+  citation-key: Hou2024Cooperative
+  container-title: IEEE/ACM Transactions on Audio, Speech, and Language Processing
+  container-title-short: IEEE/ACM Trans. Audio, Speech, Language Process.
+  DOI: 10.1109/TASLP.2023.3323135
+  ISSN: 2329-9304
+  issued:
+    - year: 2024
+  language: en
+  note: >-
+    4 citations (Crossref/DOI) [2024-12-14]
+
+    4 citations (Crossref/DOI) [2024-12-14]
+
+    TLDR: A cooperative scene-event modelling (cSEM) framework to automatically
+    model the intricate scene- event relation by an adaptive coupling matrix by
+    exploiting the relation information between AS and AE to improve ASC, which
+    is shown to be beneficial.
+  page: 68-82
+  source: IEEE Xplore
+  title: Cooperative scene-event modelling for acoustic scene classification
+  type: article-journal
+  URL: https://ieeexplore.ieee.org/abstract/document/10274856
+  volume: '32'
+
+- id: Hou2024Soundscape
+  abstract: >-
+    We live in a rich and varied acoustic world, which is experienced by
+    individuals or communities as a soundscape. Computational auditory scene
+    analysis, disentangling acoustic scenes by detecting and classifying events,
+    focuses on objective attributes of sounds, such as their category and
+    temporal characteristics, ignoring their effects on people, such as the
+    emotions they evoke within a context. To fill this gap, we propose the
+    soundscape captioning task, which enables automated soundscape analysis,
+    thus avoiding labour-intensive subjective ratings and surveys in
+    conventional methods. With soundscape captioning, context-aware descriptions
+    are generated for soundscape by capturing the acoustic scene, event
+    information, and the corresponding human affective qualities (AQs). To this
+    end, we propose an automatic soundscape captioner (SoundSCaper) system
+    composed of an acoustic model, i.e. SoundAQnet, and a large language model
+    (LLM). SoundAQnet simultaneously models multi-scale information about
+    acoustic scenes, events, and perceived AQs, while the LLM describes the
+    soundscape with captions by parsing the information captured with
+    SoundAQnet. The soundscape caption's quality is assessed by a jury of 16
+    audio/soundscape experts. The average score (out of 5) of
+    SoundSCaper-generated captions is lower than the score of captions generated
+    by two soundscape experts by 0.21 and 0.25, respectively, on the evaluation
+    set and the model-unknown mixed external dataset with varying lengths and
+    acoustic properties, but the differences are not statistically significant.
+    Overall, the proposed SoundSCaper shows promising performance, with captions
+    generated being comparable to those annotated by soundscape experts. The
+    code of models, LLM scripts, human assessment data and instructions, and
+    expert evaluation statistics are all publicly available.
+  accessed:
+    - year: 2024
+      month: 12
+      day: 11
+  author:
+    - family: Hou
+      given: Yuanbo
+    - family: Ren
+      given: Qiaoqiao
+    - family: Mitchell
+      given: Andrew
+    - family: Wang
+      given: Wenwu
+    - family: Kang
+      given: Jian
+    - family: Belpaeme
+      given: Tony
+    - family: Botteldooren
+      given: Dick
+  citation-key: Hou2024Soundscape
+  DOI: 10.48550/arXiv.2406.05914
+  issued:
+    - year: 2024
+      month: 11
+      day: 29
+  language: en
+  note: >-
+    TLDR: An automatic soundscape captioner (SoundSCaper) system composed of an
+    acoustic model, i.e. SoundAQnet, and a large language model (LLM), which
+    enables automated soundscape analysis, thus avoiding labour-intensive
+    subjective ratings and surveys in conventional methods is proposed.
+  number: arXiv:2406.05914
+  publisher: arXiv
+  source: arXiv.org
+  title: >-
+    Soundscape captioning using sound affective quality network and large
+    language model
+  type: article
+  URL: http://arxiv.org/abs/2406.05914
+
+- id: Kang2019soundscape
+  abstract: >-
+    The growing field of soundscape studies considers sound environments as
+    perceived, in context, with an interdisciplinary approach. This paper
+    outlines an ongoing European Research Council (ERC) Advanced Grant project,
+    which aims to establish “soundscape indices” (SSID). By taking
+    psychological, (psycho)acoustical, neural and physiological, and contextual
+    factors into account, SSID will adequately reflect levels of human comfort
+    to integrate side-by-side with (and eventually replace) decibel-based
+    metrics into existing (international) regulations, shifting the focus from
+    noise control to a more holistic approach. Steps to achieve this include: to
+    characterise soundscapes, by capturing acoustic environments and
+    establishing a comprehensive database; to identify key factors and their
+    influence on soundscape quality based on the database, by conducting
+    laboratory psychological evaluations, acoustical/psychoacoustic factors
+    analysis, and also, to research the neural and psychophysiological
+    underpinnings of soundscape experience, by applying techniques such as
+    functional Magnetic Resonance Imaging (fMRI) and Skin Conductance Response
+    (SCR); to develop, test and validate the soundscape indices, by analysing
+    the influences of various factors; to demonstrate the applicability of the
+    soundscape indices in practice, by establishing frameworks for soundscape
+    prediction, design, and standardisation. Ultimately, the findings of SSID
+    will allow for an easy assessment of public spaces and the increase of the
+    noise management impact.
+  author:
+    - family: Kang
+      given: Jian
+    - family: Aletta
+      given: Francesco
+    - family: Oberman
+      given: Tin
+    - family: Erfanian
+      given: Mercede
+    - family: Kachlicka
+      given: Magdalena
+    - family: Lionello
+      given: Matteo
+    - family: Mitchell
+      given: Andrew
+  citation-key: Kang2019soundscape
+  container-title: Proceedings of the 23rd International Congress on Acoustics
+  container-title-short: >-
+    Proceedings of the ICA 2019 and EAA Euroregio : 23rd International Congress
+    on Acoustics
+  DOI: 10.18154/RWTH-CONV-239249
+  event-place: Aachen
+  issued:
+    - year: 2019
+      month: 9
+  language: en
+  page: 2488–2495
+  publisher: RWTH Aachen University
+  publisher-place: Aachen
+  title: Towards soundscape indices
+  type: paper-conference
+  URL: >-
+    https://www.researchgate.net/publication/335661596{\_}Towards{\_}soundscape{\_}indices
+  volume: 'integrating 4th EAA Euroregio 2019 : 9-13 September 2019'
+
+- id: Kang2023development
+  author:
+    - family: Kang
+      given: Jian
+    - family: Aletta
+      given: Francesco
+    - family: Oberman
+      given: Tin
+    - family: Mitchell
+      given: Andrew
+    - family: Erfanian
+      given: Mercede
+  citation-key: Kang2023development
+  container-title: The 29th International Congress on Sound and Vibration
+  container-title-short: 29th Int. Congr. Sound Vib.
+  event-place: Prague
+  issued:
+    - year: 2023
+      month: 7
+  publisher: International Institute of Acoustics and Vibration (IIAV)
+  publisher-place: Prague
+  title: On the development of Soundscape Indices (SSID)
+  type: paper-conference
+
+- id: Kang2023Subjective
+  author:
+    - family: Kang
+      given: Jian
+    - family: Aletta
+      given: Francesco
+    - family: Oberman
+      given: Tin
+    - family: Mitchell
+      given: Andrew
+    - family: Erfanian
+      given: Mercede
+  citation-key: Kang2023Subjective
+  container-title: Forum Acusticum 2023
+  event-place: Turin
+  issued:
+    - year: 2023
+      month: 9
+  publisher-place: Turin
+  title: >-
+    Subjective evaluation of environmental sounds in context - Towards
+    Soundscape Indices (SSID)
+  type: paper-conference
+
+- id: Kang2023Supportive
+  accessed:
+    - year: 2022
+      month: 10
+      day: 7
+  author:
+    - family: Kang
+      given: Jian
+    - family: Aletta
+      given: Francesco
+    - family: Oberman
+      given: Tin
+    - family: Mitchell
+      given: Andrew
+    - family: Erfanian
+      given: Mercede
+    - family: Tong
+      given: Huan
+    - family: Torresin
+      given: Simone
+    - family: Xu
+      given: Chunyang
+    - family: Yang
+      given: Tingting
+    - family: Chen
+      given: Xiaochao
+  citation-key: Kang2023Supportive
+  container-title: Science of The Total Environment
+  container-title-short: Science of The Total Environment
+  DOI: 10.1016/j.scitotenv.2022.158868
+  ISSN: '00489697'
+  issued:
+    - year: 2023
+      month: 1
+  language: en
+  license: All rights reserved
+  note: |-
+    11 citations (Crossref/DOI) [2024-12-14]
+    11 citations (Crossref/DOI) [2024-12-14]
+  page: '158868'
+  source: DOI.org (Crossref)
+  title: Supportive soundscapes are crucial for sustainable environments
+  type: article-journal
+  URL: https://linkinghub.elsevier.com/retrieve/pii/S0048969722059678
+  volume: '855'
+
+- id: Lionello2021Introducing
+  abstract: >-
+    Likert scales are useful for collecting data on attitudes and perceptions
+    from large samples of people. In particular, they have become a
+    well-established tool in soundscape studies for conducting in situ surveys
+    to determine how people experience urban public spaces. However, it is still
+    unclear whether the metrics of the scales are consistently interpreted
+    during a typical assessment task. The current work aims at identifying some
+    general trends in the interpretation of Likert scale metrics and introducing
+    a procedure for the derivation of metric corrections by analyzing a case
+    study dataset of 984 soundscape assessments across 11 urban locations in
+    London. According to ISO/TS 12913-2:2018, soundscapes can be assessed
+    through the scaling of 8 dimensions: pleasant, annoying, vibrant,
+    monotonous, eventful, uneventful, calm, and chaotic. The hypothesis
+    underlying this study is that a link exists between correlations across the
+    percentage of assessments falling in each Likert scale category and a
+    dilation/compression factor affecting the interpretation of the scales
+    metric. The outcome of this metric correction value derivation is introduced
+    for soundscape, and a new projection of the London soundscapes according to
+    the corrected circumplex space is compared with the initial ISO circumplex
+    space. The overall results show a general non-equidistant interpretation of
+    the scales, particularly on the vibrant-monotonous direction. The
+    implications of this correction have been demonstrated through a Linear
+    Ridge Classifier task for predicting the London soundscape responses using
+    objective acoustic parameters, which shows significant improvement when
+    applied to the corrected data. The results suggest that the corrected values
+    account for the non-equidistant interpretation of the Likert metrics,
+    thereby allowing mathematical operations to be viable when applied to the
+    data.
+  author:
+    - family: Lionello
+      given: Matteo
+    - family: Aletta
+      given: Francesco
+    - family: Mitchell
+      given: Andrew
+    - family: Kang
+      given: Jian
+  citation-key: Lionello2021Introducing
+  container-title: Frontiers in Psychology
+  container-title-short: Front. Psychol.
+  DOI: 10.3389/fpsyg.2020.602831
+  ISSN: 1664-1078
+  issued:
+    - year: 2021
+  note: >-
+    24 citations (Crossref/DOI) [2024-12-14]
+
+    24 citations (Crossref/DOI) [2024-12-14]
+
+    TLDR: This work aims at identifying some general trends in the
+    interpretation of Likert scale metrics and introducing a procedure for the
+    derivation of metric corrections by analyzing a case study dataset of 984
+    soundscape assessments across 11 urban locations in London, showing a
+    general non-equidistant interpretation of the scales.
+  page: '3943'
+  title: >-
+    Introducing a Method for Intervals Correction on Multiple Likert Scales: A
+    Case Study on an Urban Soundscape Data Collection Instrument
+  type: article-journal
+  volume: '11'
+
+- id: MaAlsinaPages2020Urban
+  author:
+    - family: Ma Alsina-Pagès
+      given: Rosa
+    - family: Orga
+      given: Ferran
+    - family: Freixes
+      given: Marc
+    - family: Mallol
+      given: Roger
+    - family: Aletta
+      given: Francesco
+    - family: Mitchell
+      given: Andrew
+    - family: Kang
+      given: Jian
+    - family: Foraster
+      given: Maria
+  citation-key: MaAlsinaPages2020Urban
+  container-title: INTER-NOISE and NOISE-CON Congress and Conference Proceedings
+  container-title-short: INTER-NOISE NOISE-CON Congr. Conf. Proc.
+  issue: '3'
+  issued:
+    - year: 2020
+  page: 3434–3441
+  publisher: Institute of Noise Control Engineering
+  title: >-
+    Urban environment soundscape evaluation: Milan case study of noise events
+    perceptions by citizens
+  type: paper-conference
+  URL: >-
+    https://www.researchgate.net/profile/Francesco_Aletta/publication/345314432_Urban_environment_soundscape_evaluation_Milan_case_study_of_noise_events_perceptions_by_citizens/links/5fa32d4ba6fdcc062414f711/Urban-environment-soundscape-evaluation-Milan-case-study-of-noise-events-perceptions-by-citizens.pdf
+  volume: '261'
+
+- id: Mitchell2019Making
+  abstract: >-
+    The core objectives of smart city design are to increase quality of life,
+    enhance efficiency, and move towards the sustainability of cities. While
+    this will involve increased integration of new and...
+  author:
+    - family: Mitchell
+      given: Andrew
+    - family: Aletta
+      given: Francesco
+    - family: Oberman
+      given: Tin
+    - family: Erfanian
+      given: Mercede
+    - family: Kachlicka
+      given: Magdalena
+    - family: Lionello
+      given: Matteo
+    - family: Kang
+      given: Jian
+  citation-key: Mitchell2019Making
+  container-title: 178th Meeting of the Acoustical Society of America
+  container-title-short: 178th Meet. Acoust. Soc. Am.
+  DOI: 10.1121/1.5136970
+  event-place: San Diego
+  ISSN: 0001-4966
+  issue: '4'
+  issued:
+    - year: 2019
+      month: 12
+  note: >-
+    1 citations (Crossref/DOI) [2024-12-14]
+
+    1 citations (Crossref/DOI) [2024-12-14]
+
+    TLDR: The SSID project will characterise soundscapes, by capturing acoustic
+    environments and establishing a comprehensive database; identify key factors
+    and their influence on soundscape quality based on the database, by
+    conducting laboratory psychological evaluations, acoustical/psychoacoustic
+    factors analysis, and research the neural and psychophysiological
+    underpinnings of soundscape experience.
+  page: 2873–2873
+  publisher: Acoustical Society of America (ASA)
+  publisher-place: San Diego
+  title: Making cities smarter with new soundscape indices
+  type: paper-conference
+  volume: '146'
+
+- id: Mitchell2019spectral
+  abstract: >-
+    The field of soundscape studies considers sound environments as perceived,
+    in context, and has recently focussed on understanding the potential of
+    physical acoustical features, including temporal characteristics, for
+    predicting human perception. This study investigates the presence of a 1/f
+    structure in the power spectrum slope of six (psycho)acoustical parameters
+    of 30-s recordings of urban acoustic environments. The acoustical parameters
+    were calculated as time series throughout the recording period, then the
+    power spectrum of the time series was calculated and plotted on a log-log
+    scale, with the x-axis ranging from 30 s/10-1.5 Hz to 0.01 s/102 Hz. The
+    slope of the best-fitted straight line through the power spectrum was
+    calculated and compared to the corresponding perceptual attribute ratings of
+    the soundscape collected on site during the recording. The dataset includes
+    300 + recording-response pairs. An overall 1/f structure was not found for
+    any of the parameters. Differences in temporal behaviour are indicated at
+    different time scales, with a deviation in slope typically occurring at ∼2
+    s/0.5 Hz, reflecting differences in temporal behaviour among
+    within-sound-event time scales and between-sound-event time scales. An
+    ordinal logistic regression model is developed which predicts the perceptual
+    attributes of urban soundscapes based on the spectral slopes of the acoustic
+    time series.
+  author:
+    - family: Mitchell
+      given: Andrew
+    - family: Kang
+      given: Jian
+  citation-key: Mitchell2019spectral
+  container-title: 178th Meeting of the Acoustical Society of America
+  container-title-short: 178th Meet. Acoust. Soc. Am.
+  DOI: 10.1121/1.5136681
+  event-place: San Diego
+  ISSN: 0001-4966
+  issue: '4'
+  issued:
+    - year: 2019
+      month: 12
+  note: |-
+    1 citations (Crossref/DOI) [2024-12-14]
+    1 citations (Crossref/DOI) [2024-12-14]
+  page: 2795–2795
+  publisher: Acoustical Society of America (ASA)
+  publisher-place: San Diego
+  title: >-
+    The spectral structure of acoustic time series can predict the perceptual
+    assessment of urban soundscapes
+  type: paper-conference
+  volume: '146'
+
+- id: Mitchell2020Soundscape
+  abstract: >-
+    A protocol for characterizing urban soundscapes for use in the design of
+    Soundscape Indices (SSID) and general urban research as implemented under
+    the European Research Council (ERC)-funded SSID project is described in
+    detail. The protocol consists of two stages: (1) a Recording Stage to
+    collect audio-visual recordings for further analysis and for use in
+    laboratory experiments, and (2) a Questionnaire Stage to collect in situ
+    soundscape assessments via a questionnaire method paired with acoustic data
+    collection. Key adjustments and improvements to previous methodologies for
+    soundscape characterization have been made to enable the collation of data
+    gathered from research groups around the world. The data collected under
+    this protocol will form a large-scale, international soundscape database.
+  author:
+    - family: Mitchell
+      given: Andrew
+    - family: Oberman
+      given: Tin
+    - family: Aletta
+      given: Francesco
+    - family: Erfanian
+      given: Mercede
+    - family: Kachlicka
+      given: Magdalena
+    - family: Lionello
+      given: Matteo
+    - family: Kang
+      given: Jian
+  citation-key: Mitchell2020Soundscape
+  container-title: Applied Sciences
+  container-title-short: Appl. Sci.
+  DOI: 10.3390/app10072397
+  ISSN: 2076-3417
+  issue: '7'
+  issued:
+    - year: 2020
+      month: 4
+  note: >-
+    63 citations (Crossref/DOI) [2024-12-14]
+
+    63 citations (Crossref/DOI) [2024-12-14]
+
+    TLDR: A protocol for characterizing urban soundscapes for use in the design
+    of Soundscape Indices (SSID) and general urban research as implemented under
+    the European Research Council (ERC)-funded SSID project is described in
+    detail.
+  page: '2397'
+  publisher: Multidisciplinary Digital Publishing Institute
+  title: >-
+    The Soundscape Indices (SSID) Protocol: A Method for Urban Soundscape
+    Surveys–Questionnaires with Acoustical and Contextual Information
+  type: article-journal
+  volume: '10'
+
+- id: Mitchell2021Development
+  author:
+    - family: Mitchell
+      given: Andrew
+    - family: Oberman
+      given: Tin
+    - family: Aletta
+      given: Francesco
+    - family: Kang
+      given: Jian
+  citation-key: Mitchell2021Development
+  container-title: 181st Meeting of the Acoustical Society of America
+  container-title-short: The Journal of the Acoustical Society of America
+  DOI: 10.1121/10.0008334
+  event-place: Seattle
+  issue: '4'
+  issued:
+    - year: 2021
+  note: |-
+    1 citations (Crossref/DOI) [2024-12-14]
+    1 citations (Crossref/DOI) [2024-12-14]
+  page: A293-A293
+  publisher-place: Seattle
+  title: >-
+    Development of a multi-level predictive soundscape model to assess the
+    soundscapes of public spaces during the COVID-19 lockdowns
+  type: paper-conference
+  URL: https://doi.org/10.1121/10.0008334
+  volume: '150'
+
+- id: Mitchell2021International
+  author:
+    - family: Mitchell
+      given: Andrew
+    - family: Oberman
+      given: Tin
+    - family: Aletta
+      given: Francesco
+    - family: Erfanian
+      given: Mercede
+    - family: Kachlicka
+      given: Magdalena
+    - family: Lionello
+      given: Matteo
+    - family: Kang
+      given: Jian
+  citation-key: Mitchell2021International
+  DOI: 10.5281/zenodo.5578572
+  issued:
+    - year: 2021
+      month: 10
+  license: All rights reserved
+  publisher: Zenodo
+  title: >-
+    The International Soundscape Database: An integrated multimedia database of
+    urban soundscape surveys – questionnaires with acoustical and contextual
+    information
+  type: software
+
+- id: Mitchell2021Investigating
+  author:
+    - family: Mitchell
+      given: Andrew
+    - family: Oberman
+      given: Tin
+    - family: Aletta
+      given: Francesco
+    - family: Kachlicka
+      given: Magdalena
+    - family: Lionello
+      given: Matteo
+    - family: Erfanian
+      given: Mercede
+    - family: Kang
+      given: Jian
+  citation-key: Mitchell2021Investigating
+  container-title: The Journal of the Acoustical Society of America
+  container-title-short: J. Acoust. Soc. Am.
+  DOI: 10.1121/10.0008928
+  issue: '6'
+  issued:
+    - year: 2021
+      month: 12
+  note: >-
+    25 citations (Crossref/DOI) [2024-12-14]
+
+    25 citations (Crossref/DOI) [2024-12-14]
+
+    TLDR: The usefulness of predictive modeling and the importance of
+    considering contextual information when discussing the impact of sound level
+    reductions on the soundscape are demonstrated.
+  page: 4474–4488
+  publisher: Acoustical Society of America (ASA)
+  title: >-
+    Investigating urban soundscapes of the COVID-19 lockdown: A predictive
+    soundscape modeling approach
+  type: article-journal
+  volume: '150'
+
+- id: Mitchell2022DeLTA
+  author:
+    - family: Mitchell
+      given: Andrew
+    - family: Erfanian
+      given: Mercede
+    - family: Soelitsyo
+      given: Christopher
+    - family: Oberman
+      given: Tin
+    - family: Aletta
+      given: Francesco
+  citation-key: Mitchell2022DeLTA
+  DOI: 10.5281/ZENODO.7158056
+  issued:
+    - year: 2022
+  license: Creative Commons Attribution 4.0 International
+  publisher: Zenodo
+  title: DeLTA (Deep Learning Techniques for noise Annoyance detection) Dataset
+  type: document
+
+- id: Mitchell2022Effects
+  abstract: >-
+    Noise annoyance has been often reported as one of the main adverse effects
+    of noise exposure on human health, and there is consensus that it relates to
+    several factors going beyond the mere energy content of the signal. Research
+    has historically focused on a limited set of sound sources (e.g., transport
+    and industrial noise); only more recently is attention being given to more
+    holistic aspects of urban acoustic environments and the role they play in
+    the noise annoyance perceptual construct. This is the main approach promoted
+    in soundscape studies, looking at both wanted and unwanted sounds. In this
+    study, three specific aspects were investigated, namely: (1) the effect of
+    different sound sources combinations, (2) the number of sound sources
+    present in the soundscape, and (3) the presence of individual sound source,
+    on noise annoyance perception. For this purpose, a large-scale online
+    experiment was carried out with 1.2k+ participants, using 2.8k+ audio
+    recordings of complex urban acoustic environments to investigate how they
+    would influence the perceived noise annoyance. Results showed that: (1) the
+    combinations of different sound sources were not important, compared,
+    instead, to the number of sound sources identified in the soundscape
+    recording (regardless of sound sources type); (2) the annoyance ratings
+    expressed a minimum when any two clearly distinguishable sound sources were
+    present in a given urban soundscape; and (3) the presence (either in
+    isolation or combination) of traffic-related sound sources increases noise
+    annoyance, while the presence (either in isolation or combination) of
+    nature-related sound sources decreases noise annoyance.
+  accessed:
+    - year: 2022
+      month: 12
+      day: 30
+  author:
+    - family: Mitchell
+      given: Andrew
+    - family: Erfanian
+      given: Mercede
+    - family: Soelistyo
+      given: Christopher
+    - family: Oberman
+      given: Tin
+    - family: Kang
+      given: Jian
+    - family: Aldridge
+      given: Robert
+    - family: Xue
+      given: Jing-Hao
+    - family: Aletta
+      given: Francesco
+  citation-key: Mitchell2022Effects
+  container-title: International Journal of Environmental Research and Public Health
+  container-title-short: Int. J. Environ. Res. Public. Health
+  DOI: 10.3390/ijerph192214872
+  ISSN: 1660-4601
+  issue: '22'
+  issued:
+    - year: 2022
+      month: 11
+  language: en
+  license: http://creativecommons.org/licenses/by/3.0/
+  note: |-
+    18 citations (Crossref/DOI) [2024-12-14]
+    18 citations (Crossref/DOI) [2024-12-14]
+  number: '22'
+  page: '14872'
+  publisher: Multidisciplinary Digital Publishing Institute
+  source: www.mdpi.com
+  title: >-
+    Effects of Soundscape Complexity on Urban Noise Annoyance Ratings: A
+    Large-Scale Online Listening Experiment
+  title-short: Effects of Soundscape Complexity on Urban Noise Annoyance Ratings
+  type: article-journal
+  URL: https://www.mdpi.com/1660-4601/19/22/14872
+  volume: '19'
+
+- id: Mitchell2022How
+  author:
+    - family: Mitchell
+      given: Andrew
+    - family: Aletta
+      given: Francesco
+    - family: Kang
+      given: Jian
+  citation-key: Mitchell2022How
+  container-title: JASA Express Letters
+  container-title-short: JASA Express Lett.
+  DOI: 10.1121/10.0009794
+  issue: '3'
+  issued:
+    - year: 2022
+  license: All rights reserved
+  note: >-
+    30 citations (Crossref/DOI) [2024-12-14]
+
+    30 citations (Crossref/DOI) [2024-12-14]
+
+    TLDR: This study first examines the methods presented in ISO 12913 for
+    analysing and representing soundscape data by applying them to a large
+    existing database of soundscape assessments and provides an open-source
+    visualisation tool to facilitate a nuanced approach to soundscape assessment
+    and design.
+  page: '037201'
+  title: How to analyse and represent quantitative soundscape data
+  type: article-journal
+  URL: https://doi.org/10.1121/10.0009794
+  volume: '2'
+
+- id: Mitchell2022Predictive
+  author:
+    - family: Mitchell
+      given: Andrew
+  citation-key: Mitchell2022Predictive
+  event-place: London, UK
+  genre: Phd Thesis
+  issued:
+    - year: 2022
+      month: 6
+      day: 6
+  language: English
+  number-of-pages: '232'
+  publisher: University College London
+  publisher-place: London, UK
+  title: >-
+    Predictive Modelling of Complex Urban Soundscapes - Enabling an engineering
+    approach to soundscape design
+  title-short: Predictive Modelling of Complex Urban Soundscapes
+  type: thesis
+  URL: https://discovery.ucl.ac.uk/id/eprint/10156562
+
+- id: Mitchell2023conceptual
+  abstract: >-
+    With the recent standardization of soundscape, there has been increased
+    interest in bringing the soundscape approach into an engineering context.
+    While traditional assessment methods, such as those given in the ISO 12913
+    series, provide information on the current status quo of an environment,
+     they offer limited insight into hypothetical environments and are therefore less relevant for design purposes. This conference paper presents a conceptual framework for the practical use of predictive soundscape models and indices. The framework outlines the goals, constraints, and potential
+     applications of these models and highlights the need for further research in this area to better understand the dynamics of soundscape perception and to put predictive models to practical use. Predictive soundscape models can be integrated with soundscape indices - such as those being developed
+     by the Soundscape Indices (SSID) project - for assessment purposes, providing a comprehensive approach to evaluating and designing sound environments. The use of predictive models is necessary to address the challenges faced in practical applications of the soundscape approach and to fill
+     the gap between traditional assessment methods and the design of sound environments.
+  accessed:
+    - year: 2024
+      month: 12
+      day: 11
+  author:
+    - family: Mitchell
+      given: Andrew
+    - family: Aletta
+      given: Francesco
+    - family: Oberman
+      given: Tin
+    - family: Erfanian
+      given: Mercede
+    - family: Kang
+      given: Jian
+  citation-key: Mitchell2023conceptual
+  container-title: INTER-NOISE and NOISE-CON Congress and Conference Proceedings
+  container-title-short: INTER-NOISE NOISE-CON Congr. Conf. Proc.
+  DOI: 10.3397/IN_2023_0309
+  event-place: Chiba, Greater Tokyo
+  issued:
+    - year: 2023
+      month: 11
+      day: 30
+  language: en
+  note: |-
+    1 citations (Crossref/DOI) [2024-12-14]
+    1 citations (Crossref/DOI) [2024-12-14]
+  page: 2108-2118
+  publisher-place: Chiba, Greater Tokyo
+  source: DOI.org (Crossref)
+  title: >-
+    A conceptual framework for the practical use of predictive models and
+    Soundscape Indices: Goals, constraints, and applications
+  title-short: >-
+    A conceptual framework for the practical use of predictive models and
+    Soundscape Indices
+  type: paper-conference
+  URL: https://www.ingentaconnect.com/content/10.3397/IN_2023_0309
+  volume: '268'
+
+- id: Mitchell2023Deep
+  author:
+    - family: Mitchell
+      given: Andrew
+    - family: Brown
+      given: Emmeline
+    - family: Deo
+      given: Ratneel
+    - family: Hou
+      given: Yuanbo
+    - family: Kirton-Wingate
+      given: Jasper
+    - family: Liang
+      given: Jinhua
+    - family: Sheinkman
+      given: Alisa
+    - family: Soelistyo
+      given: Christopher
+    - family: Sood
+      given: Hari
+    - family: Wongprommoon
+      given: Arin
+    - family: Xing
+      given: Kaiyue
+    - family: Yip
+      given: Wingyan
+    - family: Aletta
+      given: Francesco
+  citation-key: Mitchell2023Deep
+  container-title: The Journal of the Acoustical Society of America
+  container-title-short: J. Acoust. Soc. Am.
+  DOI: 10.1121/10.0018787
+  event-place: Chicago
+  issue: 3_supplement
+  issued:
+    - year: 2023
+      month: 3
+  note: >-
+    2 citations (Crossref/DOI) [2024-12-14]
+
+    2 citations (Crossref/DOI) [2024-12-14]
+
+    TLDR: Investigation of how sound source information could be incorporated
+    into deep learning models for predicting urban noise annoyance detection
+    showed that including sound source labels as a simultaneous training output,
+    rather than as an explicit model input resulted in the best performance.
+  page: A262–A262
+  publisher: Acoustical Society of America (ASA)
+  publisher-place: Chicago
+  title: >-
+    Deep learning techniques for noise annoyance detection: Results from an
+    intensive workshop at the Alan Turing Institute
+  type: paper-conference
+  volume: '153'
+
+- id: Mitchell2023How
+  author:
+    - family: Mitchell
+      given: Andrew
+    - family: Aletta
+      given: Francesco
+    - family: Oberman
+      given: Tin
+  citation-key: Mitchell2023How
+  container-title: Forum Acusticum 2023
+  event-place: Turin
+  issued:
+    - year: 2023
+      month: 9
+  publisher-place: Turin
+  title: How do we define soundscape?
+  type: paper-conference
+
+- id: Mitchell2023International
+  author:
+    - family: Mitchell
+      given: Andrew
+    - family: Oberman
+      given: Tin
+    - family: Aletta
+      given: Francesco
+    - family: Erfanian
+      given: Mercede
+    - family: Kachlicka
+      given: Magdalena
+    - family: Lionello
+      given: Matteo
+    - family: Kang
+      given: Jian
+  citation-key: Mitchell2023International
+  DOI: 10.5281/zenodo.6331810
+  issued:
+    - year: 2023
+      month: 9
+      day: 19
+  publisher: Zenodo
+  title: >-
+    The International Soundscape Database: An integrated multimedia database of
+    urban soundscape surveys -- questionnaires with acoustical and contextual
+    information
+  type: dataset
+  URL: https://zenodo.org/record/6331810
+  version: v0.2.4
+
+- id: Mitchell2023Soundscapy
+  author:
+    - family: Mitchell
+      given: Andrew
+  citation-key: Mitchell2023Soundscapy
+  genre: Python
+  issued:
+    - year: 2023
+      month: 9
+      day: 19
+  license: BSD-3-Clause
+  title: Soundscapy
+  type: software
+  URL: https://github.com/MitchellAcoustics/Soundscapy
+  version: v0.5.4
+
+- id: Mitchell2024Searching
+  abstract: >-
+    Nearly 10 years ago, the definition of soundscape was codified in an ISO
+    standard for the first time. This definition drew from Schafer and
+    Southworth's work, which focused squarely on human perception in context.
+    However, the term soundscape has seen widespread academic and popular
+    adoption in fields and applications well outside its original 'human
+    perception' context. This paper will collect a range of definitions of
+    soundscape across urban, underwater, ecological and other contexts. These
+    uses often conflict with the ISO 12913 definition, both by drawing the focus
+    away from humans and by declining to define soundscape as a perceptual
+    construct. This paper will examine these broader uses of the term and
+    consider a possible new definition which aims to reemphasise soundscape's
+    relation to landscape and harmonise the standard definition with its varied
+    uses.
+  accessed:
+    - year: 2024
+      month: 12
+      day: 12
+  author:
+    - family: Mitchell
+      given: Andrew
+    - family: Oberman
+      given: Tin
+    - family: Aletta
+      given: Francesco
+    - family: Kang
+      given: Jian
+  citation-key: Mitchell2024Searching
+  DOI: 10.31219/osf.io/6dbnu
+  issued:
+    - year: 2024
+      month: 1
+      day: 15
+  language: en
+  note: |-
+    0 citations (Crossref/DOI) [2024-12-14]
+    0 citations (Crossref/DOI) [2024-12-14]
+  publisher: OSF
+  source: OSF Preprints
+  title: >-
+    Searching for a common understanding of 'soundscape': a critical look at the
+    definitions and uses of the term
+  title-short: Searching for a common understanding of 'soundscape'
+  type: article
+  URL: https://osf.io/6dbnu
+
+- id: Mitchell2024Soundscape
+  abstract: >-
+    The soundscape approach provides a basis for considering the holistic
+    perception of sound environments in context. Whereas steady advancements
+    have been made in methods for assessment and analysis, a gap exists for
+    comparing soundscapes and quantifying improvements in the multidimensional
+    perception of a soundscape. To this end, there is a need for the creation of
+    single value indices to compare soundscape quality which incorporate
+    context, aural diversity, and specific design goals for a given application.
+    Just as a variety of decibel-based indices have been developed for various
+    purposes (e.g.,  LAeq,  LCeq,  L90,  Lden, etc.), the soundscape approach
+    requires the ability to create original indices for different uses, which
+    share a common language and understanding. Therefore, a unified framework
+    for creating bespoke and reference single index measures of soundscape
+    perception is proposed, allowing for different metrics to be defined in the
+    future. This framework is based on a four-step test-target paradigm wherein
+    a desired soundscape perception is defined as a target distribution within
+    the soundscape circumplex, and the two-dimensional Kolmogorov-Smirnov
+    distance is used to test an assessed soundscape against this target.
+    Applications and implications of this framework are discussed, and a
+    multi-objective optimisation method for empirically defining perception
+    indices is proposed.
+  accessed:
+    - year: 2024
+      month: 12
+      day: 11
+  author:
+    - family: Mitchell
+      given: Andrew
+    - family: Aletta
+      given: Francesco
+    - family: Oberman
+      given: Tin
+    - family: Kang
+      given: Jian
+  citation-key: Mitchell2024Soundscape
+  container-title: Journal of the Acoustical Society of America
+  container-title-short: J. Acoust. Soc. Am.
+  DOI: 10.1121/10.0034417
+  ISSN: 0001-4966
+  issue: '6'
+  issued:
+    - year: 2024
+      month: 12
+      day: 3
+  language: en
+  note: >-
+    0 citations (Crossref/DOI) [2024-12-14]
+
+    0 citations (Crossref/DOI) [2024-12-14]
+
+    TLDR: A unified framework for creating bespoke and reference single index
+    measures of soundscape perception is proposed, allowing for different
+    metrics to be defined in the future, and a multi-objective optimisation
+    method for empirically defining perception indices is proposed.
+  page: 3694-3706
+  source: Silverchair
+  title: >-
+    Soundscape perception indices (SPIs): developing context-dependent single
+    value scores of multidimensional soundscape perceptual quality
+  title-short: Soundscape perception indices (SPIs)
+  type: article-journal
+  URL: https://doi.org/10.1121/10.0034417
+  volume: '156'
+
+- id: Mitchell2024Soundscapy
+  abstract: >-
+    Soundscape questionnaires are widely used to gather subjective information
+    about people's perceptions and attitudes towards their acoustic environment.
+    Despite the widespread adoption of ISO/TS 12913-3 guidelines for analyzing
+    soundscape survey data, there are still several interpretations
+     and challenges in application. To enable the easy, accessible, and consistent analysis of soundscape data, an open-source python package called Soundscapy has been developed. This package implements a visualization approach for soundscape data analysis using a probabilistic method that depicts
+     the collective perception of a soundscape as a distribution of responses within the circumplex. In addition, functions for psychoacoustic and acoustic analysis of binaural data are included, with a focus on consistent and optimized processing of multiple recordings. This conference paper outlines
+     the important features of Soundscapy, explains its basic functioning, lists its current capabilities, and gives recommendations for its best use. Finally, the future development of Soundscapy is proposed, including the integration of predictive soundscape models for use in automated assessment
+     and design.
+  accessed:
+    - year: 2024
+      month: 12
+      day: 13
+  author:
+    - family: Mitchell
+      given: Andrew
+  citation-key: Mitchell2024Soundscapy
+  container-title: INTER-NOISE and NOISE-CON Congress and Conference Proceedings
+  container-title-short: INTER-NOISE NOISE-CON Congr. Conf. Proc.
+  DOI: 10.3397/IN_2024_3404
+  event-place: Nantes
+  event-title: INTER-NOISE 2024
+  issued:
+    - year: 2024
+      month: 10
+      day: 4
+  language: en
+  note: >-
+    0 citations (Crossref/DOI) [2024-12-14]
+
+    0 citations (Crossref/DOI) [2024-12-14]
+
+    TLDR: The important features of Soundscapy are outlined, its basic
+    functioning is explained, its current capabilities are listed, and its
+    future development is proposed, including the integration of predictive
+    soundscape models for use in automated assessment and design.
+  page: 4029-4039
+  publisher: Institute of Noise Control Engineering
+  publisher-place: Nantes
+  source: DOI.org (Crossref)
+  title: 'Soundscapy: a python package for soundscape assessment and analysis'
+  title-short: Soundscapy
+  type: paper-conference
+  URL: https://www.ingentaconnect.com/content/10.3397/IN_2024_3404
+  volume: '270'
+
+- id: Moshona2022What
+  author:
+    - family: Moshona
+      given: Cleopatra Christina
+    - family: Aletta
+      given: Francesco
+    - family: Henze
+      given: Helen
+    - family: Chen
+      given: Xiaochao
+    - family: Mitchell
+      given: Andrew
+    - family: Oberman
+      given: Tin
+    - family: Tong
+      given: Huan
+    - family: Fiebig
+      given: André
+    - family: Kang
+      given: Jian
+    - family: Schulte-Fortkamp
+      given: Brigitte
+  citation-key: Moshona2022What
+  container-title: >-
+    51st International Congress and Exposition on Noise Control Engineering
+    (INTER-NOISE 2022)
+  container-title-short: 51st Int. Congr. Expo. Noise Control Eng. INTER-NOISE 2022
+  issued:
+    - year: 2022
+  title: >-
+    What is a soundscape intervention? Exploring definitions and identifi-cation
+    criteria and a platform to gather real-world examples
+  type: paper-conference
+  URL: >-
+    https://www.researchgate.net/profile/Francesco-Aletta/publication/362906252_What_is_a_soundscape_intervention_Exploring_definitions_and_identification_criteria_and_a_platform_to_gather_real-world_examples/links/630664e561e4553b95364712/What-is-a-soundscape-intervention-Exploring-definitions-and-identification-criteria-and-a-platform-to-gather-real-world-examples.pdf
+
+- id: Moshona2024framework
+  abstract: >-
+    In recent years, various stakeholders and political decision-makers have
+    recognized the significance of high-quality urban sound environments,
+    stressing the need for user-centered trajectories. Despite the rising
+    interest in this field, the soundscape approach has not yet fully permeated
+    urban planning and design, possibly due to a lack of comprehensible
+    guidelines on how to implement and curate successful soundscape designs,
+    attributed to on-going developments on this subject. In the course of the
+    Catalogue of Soundscape Interventions (CSI) Project, a taxonomy of eight
+    dimensions was developed to serve as an orientation aid for practitioners,
+    describing important aspects of soundscape-related measures that can be used
+    as a brief to facilitate communication between authorities, consultants, and
+    researchers. This study describes the theoretical framework and, in
+    particular, the sequential coding process involved in deriving these
+    dimensions, which is based on grounded theory. It lists observations and
+    limitations of the resulting taxonomy and builds upon these findings to
+    critically review and revisit existing nomenclature and concepts. Finally, a
+    qualitative distinction in the form of a design pyramid according to
+    ascending levels of epistemic rigor is proposed, to differentiate between
+    documented practices, which may serve as a reference point for future
+    harmonization and standardization.
+  accessed:
+    - year: 2024
+      month: 12
+      day: 12
+  author:
+    - family: Moshona
+      given: Cleopatra Christina
+    - family: Fiebig
+      given: André
+    - family: Aletta
+      given: Francesco
+    - family: Chen
+      given: Xiaochao
+    - family: Kang
+      given: Jian
+    - family: Mitchell
+      given: Andrew
+    - family: Oberman
+      given: Tin
+    - family: Schulte-Fortkamp
+      given: Brigitte
+  citation-key: Moshona2024framework
+  container-title: Noise Mapping
+  container-title-short: Noise Mapp.
+  DOI: 10.1515/noise-2024-0002
+  ISSN: 2084-879X
+  issue: '1'
+  issued:
+    - year: 2024
+      month: 1
+      day: 1
+  language: en
+  license: >-
+    De Gruyter expressly reserves the right to use all content for commercial
+    text and data mining within the meaning of Section 44b of the German
+    Copyright Act.
+  note: |-
+    1 citations (Crossref/DOI) [2024-12-14]
+    1 citations (Crossref/DOI) [2024-12-14]
+  publisher: De Gruyter Open Access
+  source: www.degruyter.com
+  title: >-
+    A framework to characterize and classify soundscape design practices based
+    on grounded theory
+  type: article-journal
+  URL: https://www.degruyter.com/document/doi/10.1515/noise-2024-0002/html
+  volume: '11'
+
+- id: Orga2021Multilevel
+  abstract: >-
+    The recent development and deployment of Wireless Acoustic Sensor Networks
+    (WASN) present new ways to address urban acoustic challenges in a smart city
+    context. A focus on improving quality of life forms the core of smart-city
+    design paradigms and cannot be limited to simply measuring objective
+    environmental factors, but should also consider the perceptual,
+    psychological and health impacts on citizens. This study therefore makes use
+    of short (1–2.7 s) recordings sourced from a WASN in Milan which were
+    grouped into various environmental sound source types and given an annoyance
+    rating via an online survey with N=100 participants. A multilevel
+    psychoacoustic model was found to achieve an overall R2=0.64 which
+    incorporates Sharpness as a fixed effect regardless of the sound source type
+    and Roughness, Impulsiveness and Tonality as random effects whose
+    coefficients vary depending on the sound source. These results present a
+    promising step toward implementing an on-sensor annoyance model which
+    incorporates psychoacoustic features and sound source type, and is
+    ultimately not dependent on sound level.
+  author:
+    - family: Orga
+      given: Ferran
+    - family: Mitchell
+      given: Andrew
+    - family: Freixes
+      given: Marc
+    - family: Aletta
+      given: Francesco
+    - family: Alsina-Pagès
+      given: Rosa Ma
+    - family: Foraster
+      given: Maria
+  citation-key: Orga2021Multilevel
+  container-title: Sustainability
+  DOI: 10.3390/su13115779
+  ISSN: 2071-1050
+  issue: '11'
+  issued:
+    - year: 2021
+      month: 5
+  note: >-
+    9 citations (Crossref/DOI) [2024-12-14]
+
+    9 citations (Crossref/DOI) [2024-12-14]
+
+    TLDR: A multilevel psychoacoustic model was found to achieve an overall
+    R2=0.64 which incorporates Sharpness as a fixed effect regardless of the
+    sound source type and Roughness, Impulsiveness and Tonality as random
+    effects whose coefficients vary depending on the sound sources.
+  page: '5779'
+  publisher: MDPI AG
+  title: Multilevel Annoyance Modelling of Short Environmental Sound Recordings
+  type: article-journal
+  URL: https://www.mdpi.com/2071-1050/13/11/5779
+  volume: '13'
+
+- id: Papadakis2022Translation
+  accessed:
+    - year: 2022
+      month: 10
+      day: 14
+  author:
+    - family: Papadakis
+      given: Nikolaos M.
+    - family: Aletta
+      given: Francesco
+    - family: Kang
+      given: Jian
+    - family: Oberman
+      given: Tin
+    - family: Mitchell
+      given: Andrew
+    - family: Stavroulakis
+      given: Georgios E.
+  citation-key: Papadakis2022Translation
+  container-title: Applied Acoustics
+  container-title-short: Applied Acoustics
+  DOI: 10.1016/j.apacoust.2022.109031
+  ISSN: 0003682X
+  issued:
+    - year: 2022
+      month: 11
+  language: en
+  license: All rights reserved
+  note: |-
+    39 citations (Crossref/DOI) [2024-12-14]
+    39 citations (Crossref/DOI) [2024-12-14]
+  page: '109031'
+  source: DOI.org (Crossref)
+  title: >-
+    Translation and cross-cultural adaptation methodology for soundscape
+    attributes – A study with independent translation groups from English to
+    Greek
+  type: article-journal
+  URL: https://linkinghub.elsevier.com/retrieve/pii/S0003682X22004054
+  volume: '200'
+
+- id: Papadakis2023City
+  accessed:
+    - year: 2024
+      month: 12
+      day: 12
+  author:
+    - family: Papadakis
+      given: Nikolaos M.
+    - family: Aletta
+      given: Francesco
+    - family: Kang
+      given: Jian
+    - family: Oberman
+      given: Tin
+    - family: Mitchell
+      given: Andrew
+    - family: Aroni
+      given: Ioanna
+    - family: Stavroulakis
+      given: Georgios E.
+  citation-key: Papadakis2023City
+  container-title: Applied Acoustics
+  container-title-short: Appl. Acoust.
+  DOI: 10.1016/j.apacoust.2023.109659
+  issued:
+    - year: 2023
+  language: en
+  note: |-
+    4 citations (Crossref/DOI) [2024-12-14]
+    4 citations (Crossref/DOI) [2024-12-14]
+  page: '109659'
+  publisher: Elsevier
+  source: Google Scholar
+  title: >-
+    City, town, village: potential differences in residents soundscape
+    perception using ISO/TS 12913-2: 2018
+  title-short: City, town, village
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S0003682X23004577
+  volume: '213'
+
+- id: Tong2021Increases
+  abstract: >-
+    Many cities around the world have claimed that the enforcement of lockdown
+    measures to contain the spread of COVID-19 and the corresponding limitations
+    of human activities led to reduced environmental noise levels. However,
+    noise complaints reported by many local authorities were on the rise soon
+    after the local lockdowns came into force. This research took Greater London
+    in the UK as a case study. The overall aim was examining how noise
+    complaints changed during the first stages of the lockdown implementation,
+    during Spring 2020, both locally and at city scale, and how urban factors
+    may have been influencing them. Noise complaint and urban factor datasets
+    from the Government's publicly available data warehouse were used. The
+    results show that during the COVID-19 lockdown the number of noise
+    complaints increased by 48%, compared with the same period during Spring
+    2019. In terms of noise sources, complaints about construction (36%) and
+    neighbourhood (50%) noise showed significant increases. Urban factors,
+    including housing and demographic factors, played a more significant role
+    than the actual noise exposure to road and rail traffic noise, as derived
+    from the London noise maps. In detail, the change rate of noise complaints
+    was higher in areas with higher unemployment rates, more residents with no
+    qualifications, and lower house price. It is expected that this study could
+    help government with allocating resources more effectively and achieve a
+    better urban environment.
+  author:
+    - family: Tong
+      given: Huan
+    - family: Aletta
+      given: Francesco
+    - family: Mitchell
+      given: Andrew
+    - family: Oberman
+      given: Tin
+    - family: Kang
+      given: Jian
+  citation-key: Tong2021Increases
+  container-title: Science of The Total Environment
+  container-title-short: Sci. Total Environ.
+  DOI: 10.1016/j.scitotenv.2021.147213
+  ISSN: 0048-9697
+  issued:
+    - year: 2021
+  note: |-
+    53 citations (Crossref/DOI) [2024-12-14]
+    53 citations (Crossref/DOI) [2024-12-14]
+  page: '147213'
+  title: >-
+    Increases in noise complaints during the COVID-19 lockdown in Spring 2020: A
+    case study in Greater London, UK
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S0048969721022841
+  volume: '785'
+
+- id: Vida2021Urban
+  abstract: >-
+    Soundscape assessments by citizens are starting to emerge as a common
+    practice, normally carried out in context by means of soundwalks along
+    selected paths with volunteers. However, when such assessments are carried
+    out, either in situ or in laboratory experiments, visually impaired citizens
+    are not usually involved. To address this question, three soundwalks were
+    carried out in 2020 in the city of Granada, in southern Spain, with the
+    participation of visually impaired people. In this paper, we present the
+    lessons learnt from this research with respect to the methodology issues
+    that have to do with soundwalking and the surveying procedures when people
+    with limited vison are participating, the assessment results, and a
+    comparison with a soundscape evaluation carried out in 2019 without the
+    collaboration of visually impaired people. The results of this preliminary
+    campaign highlight that: (1) Adapting soundscape assessment protocols from
+    standards for visually impaired people is a methodological challenge that
+    requires research attention; (2) Some of the different patterns in the
+    assessment of the soundscape pleasantness between visually impaired and
+    nonvisually impaired participants emerged; (3) The perception of quietness
+    may differ for visually impaired people when orientation and identification
+    are factors that play a role in the acoustic environment evaluation.
+  accessed:
+    - year: 2022
+      month: 10
+      day: 7
+  author:
+    - family: Vida
+      given: Jerónimo
+    - family: Almagro
+      given: José Antonio
+    - family: García-Quesada
+      given: Rafael
+    - family: Aletta
+      given: Francesco
+    - family: Oberman
+      given: Tin
+    - family: Mitchell
+      given: Andrew
+    - family: Kang
+      given: Jian
+  citation-key: Vida2021Urban
+  container-title: Sustainability
+  container-title-short: Sustainability
+  DOI: 10.3390/su132413867
+  ISSN: 2071-1050
+  issue: '24'
+  issued:
+    - year: 2021
+      month: 12
+      day: 15
+  language: en
+  license: All rights reserved
+  note: |-
+    4 citations (Crossref/DOI) [2024-12-14]
+    4 citations (Crossref/DOI) [2024-12-14]
+  page: '13867'
+  source: DOI.org (Crossref)
+  title: >-
+    Urban Soundscape Assessment by Visually Impaired People: First
+    Methodological Approach in Granada (Spain)
+  title-short: Urban Soundscape Assessment by Visually Impaired People
+  type: article-journal
+  URL: https://www.mdpi.com/2071-1050/13/24/13867
+  volume: '13'
+
+- id: Vida2023Soundscape
+  abstract: >-
+    In soundscape studies there is a need to validate the ISO 12913 framework
+    and questionnaire protocols in non-English speaking regions, which is being
+    addressed via an international translation effort carried out within the
+    Soundscape Attributes Translation Project (SATP). The objective of the SATP
+    initiative is to promote the widespread use of the soundscape circumplex
+    model attributes by validating proposed translations using standardized
+    listening experiments in different languages and geographical regions. This
+    study compares the Spanish (ISO 639:spa) translation of the ISO soundscape
+    circumplex model with the original English version and introduces the
+    Structural Summary Method (SSM) for analysis. The research findings suggest
+    a reasonable accordance in listening experiments carried out by native
+    English and Spanish speakers, but also highlight the need for revision of
+    the “vibrant/monotonous” and “eventful/uneventful” dimensions to harmonize
+    the interpretation of each dimension by the affected population. These
+    revisions not only improve the translation of the model into Spanish, but
+    also raise questions about the adequacy of the original English formulation
+    of the model. The study underscores the cultural differences underlying the
+    meaning of these dimensions and the challenges of objectifying the
+    soundscape circumplex model within the ISO 12913 framework.
+  accessed:
+    - year: 2024
+      month: 12
+      day: 12
+  author:
+    - family: Vida
+      given: Jerónimo
+    - family: Antonio Almagro
+      given: José
+    - family: García-Quesada
+      given: Rafael
+    - family: Aletta
+      given: Francesco
+    - family: Oberman
+      given: Tin
+    - family: Mitchell
+      given: Andrew
+    - family: Kang
+      given: Jian
+  citation-key: Vida2023Soundscape
+  container-title: Applied Acoustics
+  container-title-short: Appl. Acoust.
+  DOI: 10.1016/j.apacoust.2023.109516
+  ISSN: 0003-682X
+  issued:
+    - year: 2023
+      month: 8
+      day: 1
+  language: en
+  note: |-
+    19 citations (Crossref/DOI) [2024-12-14]
+    19 citations (Crossref/DOI) [2024-12-14]
+  page: '109516'
+  source: ScienceDirect
+  title: >-
+    Soundscape attributes in spanish: a comparison with the english version of
+    the protocol proposed in method a of the ISO/TS 12913–2
+  title-short: Soundscape attributes in spanish
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S0003682X23003146
+  volume: '211'
+
+- id: VidaManzano2021sound
+  author:
+    - family: Vida Manzano
+      given: Jerónimo
+    - family: Almagro Pastor
+      given: José Antonio
+    - family: García Quesada
+      given: Rafael
+    - family: Aletta
+      given: Francesco
+    - family: Oberman
+      given: Tin
+    - family: Mitchell
+      given: Andrew
+    - family: Kang
+      given: Jian
+  citation-key: VidaManzano2021sound
+  container-title: Noise Mapping
+  container-title-short: Noise Mapp.
+  DOI: 10.1515/noise-2021-0002
+  issue: '1'
+  issued:
+    - year: 2021
+  note: >-
+    28 citations (Crossref/DOI) [2024-12-14]
+
+    28 citations (Crossref/DOI) [2024-12-14]
+
+    TLDR: Results show a great change in environmental noise levels that is
+    interesting not only because of its magnitude, but also for its
+    implications, especially at those sites where social human activity was an
+    identifying characteristic.
+  page: 16–31
+  publisher: De Gruyter
+  title: The "sound of silence" in Granada during the COVID-19 lockdown
+  type: article-journal
+  volume: '8'
+
+- id: Xu2024Effects
+  accessed:
+    - year: 2024
+      month: 12
+      day: 12
+  author:
+    - family: Xu
+      given: X.
+    - family: Oberman
+      given: Tin
+    - family: Mitchell
+      given: Andrew
+    - family: Huang
+      given: S.
+    - family: Aletta
+      given: F.
+    - family: Kang
+      given: J.
+  citation-key: Xu2024Effects
+  container-title: >-
+    Proceedings of the 10th Convention of the European Acoustics Association
+    Forum Acusticum 2023
+  container-title-short: Proc. 10th Conv. Eur. Acoust. Assoc. Forum Acusticum 2023
+  DOI: 10.61782/fa.2023.0732
+  event-place: Turin, Italy
+  event-title: 10th Convention of the European Acoustics Association Forum Acusticum 2023
+  ISBN: 978-88-88942-67-4
+  issued:
+    - year: 2024
+      month: 1
+      day: 17
+  language: en
+  note: |-
+    0 citations (Crossref/DOI) [2024-12-14]
+    0 citations (Crossref/DOI) [2024-12-14]
+  page: 1047-1054
+  publisher: European Acoustics Association
+  publisher-place: Turin, Italy
+  source: DOI.org (Crossref)
+  title: >-
+    Effects of visual stimulus on soundscape perception: a pilot study using
+    immersive virtual reality (IVR)
+  title-short: Effects of visual stimulus on soundscape perception
+  type: paper-conference
+  URL: https://dael.euracoustics.org/confs/landing_pages/fa2023/000732.html
+...
