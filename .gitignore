@@ -10,5 +10,6 @@
 /.luarc.json
 __pychache__
 /.ruff_cache/
+*_files/libs/
 
 *.log
