@@ -7,7 +7,7 @@ categories:
   - lecture
 
 format:
-  live-revealjs: 
+  clean-revealjs: 
     theme: [default, clean.scss]
     slide-number: true
     show-slide-number: all
@@ -21,19 +21,19 @@ format:
 
 engine: knitr
 
-webr:
-  cell-options:
-    autorun: false
-    fig-width: 7
-    fig-height: 3
-  packages:
-    - dplyr
-    - tidyr
-    - knitr
-    - ggplot2
-    - ggthemes
-    - palmerpenguins
-    - NHANES
+# webr:
+#   cell-options:
+#     autorun: false
+#     fig-width: 7
+#     fig-height: 3
+#   packages:
+#     - dplyr
+#     - tidyr
+#     - knitr
+#     - ggplot2
+#     - ggthemes
+#     - palmerpenguins
+#     - NHANES
   
 citation:
   type: paper-conference
@@ -43,23 +43,6 @@ citation:
     - name: Andrew Mitchell
   container-title: Lecture for BSSC0021 - Business Statistics and Data Analytics
 ---
-
-## Setup {.scrollable}
-
-{{< include ../../../_extensions/r-wasm/live/_knitr.qmd >}}
-
-
-```{webr setup}
-#| include: false
-#| autorun: true
-
-library(ggplot2)
-library(dplyr)
-library(tidyr)
-library(palmerpenguins)
-library(ggthemes)
-library(NHANES)
-```
 
 ## Learning Objectives
 
@@ -83,9 +66,38 @@ Key teaching points:
 
 :::
 
-## Introduction
+{{< include ../../../_extensions/r-wasm/live/_knitr.qmd >}}
+
+```{r setup}
+#| include: false
+#| autorun: true
+
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(reshape2)
+library(janitor)
+library(knitr)
+library(ggthemes)
+library(NHANES)
+```
+
+## Introduction {.smaller}
 
 Probability theory is the branch of mathematics that deals with chance and uncertainty. It forms an important part of the foundation for statistics, because it provides us with the mathematical tools to describe uncertain events.
+
+::: {.incremental}
+- **Historical Origins**
+  - Developed by mathematicians studying gambling
+  - Key advances from Pascal and Fermat's correspondence
+  - Evolved into fundamental tool for statistics
+
+- **Modern Applications**
+  - Business decision-making under uncertainty
+  - Weather forecasting and risk assessment
+  - Medical diagnosis and testing
+  - Data analysis and machine learning
+:::
 
 ::: {.notes}
 The study of probability arose in part due to interest in understanding games of chance, like cards or dice. These games provide useful examples of many statistical concepts, because when we repeat these games the likelihood of different outcomes remains (mostly) the same.
@@ -166,26 +178,57 @@ Teaching tips:
 Time allocation: Spend about 3-4 minutes on this slide to establish fundamental concepts that will be built upon throughout the lecture.
 :::
 
-## Key Terms {.smaller}
+## Key Terms
+
+::: {.panel-tabset}
+### 1. Experiment
+
+**Any activity that produces or observes an outcome**
 
 ::: {.incremental}
-1. **Experiment**: Any activity that produces or observes an outcome
 
-   - Flipping a coin
-   - Rolling a die
-   - Trying a new route to work
+   - Simple Examples:
+     * Flipping a coin
+     * Rolling a die
+     * Drawing a card
+   - Real-world Examples:
+     * Trying a new route to work
+     * Testing a medical treatment
+     * Measuring customer satisfaction
+:::
 
-2. **Sample Space**: Set of all possible outcomes
+### 2. Sample Space
 
-   - Coin flip: {heads, tails}
-   - Six-sided die: {1,2,3,4,5,6}
-   - Time to work: all possible real numbers > 0
+**Set of all possible outcomes**
 
-3. **Event**: A subset of the sample space
+::: {.incremental}
 
-   - Getting heads in a coin flip
-   - Rolling a 4 on a die
-   - Taking 21 minutes to get home
+   - Discrete Sets:
+     * Coin flip: {heads, tails}
+     * Six-sided die: {1,2,3,4,5,6}
+     * Card draw: {52 possible cards}
+   - Continuous Sets:
+     * Time to work: all real numbers > 0
+     * Temperature readings
+     * Stock prices
+:::
+
+### 3. Event
+
+**A subset of the sample space**
+
+::: {.incremental}
+
+   - Single Events:
+     * Getting heads in a coin flip
+     * Rolling a 4 on a die
+     * Drawing the ace of spades
+   - Compound Events:
+     * Rolling an even number
+     * Drawing a red card
+     * Arriving at work in under 20 minutes
+:::
+
 :::
 
 ::: {.notes}
@@ -198,21 +241,43 @@ The sample space is the set of possible outcomes for an experiment. We represent
 An event is a subset of the sample space. In principle it could be one or more of possible outcomes in the sample space, but here we will focus primarily on elementary events which consist of exactly one possible outcome.
 :::
 
-## Formal Properties of Probability
+## Formal Properties of Probability {.smaller}
 
-For any event $E_i$ in a sample space:
+Kolmogorov's axioms define what makes a value a probability:
 
-1. Probability cannot be negative:
+::: {.columns}
 
-   $P(E_i) \ge 0$
+:::: {.column width="50%"}
+::: {.incremental}
+1. **Non-negativity**: Probability cannot be negative
+   - $P(E_i) \ge 0$
+   - Example: Can't have -10% chance of rain
+   - All probabilities must be zero or positive
 
-2. Total probability of all outcomes = 1:
+2. **Total Probability**: All outcomes sum to 1
+   - $\sum_{i=1}^N{P(E_i)} = 1$
+   - Example: Rolling a die
+     * P(1) + P(2) + P(3) + P(4) + P(5) + P(6) = 1
+     * Each P(number) = 1/6, so 6 * (1/6) = 1
 
-   $\sum_{i=1}^N{P(E_i)} = 1$
+3. **Upper Bound**: Individual probability ≤ 1
+   - $P(E_i)\le 1$
+   - Follows from rules 1 and 2
+   - Example: Can't have 120% chance of success
+:::
+::::
 
-3. Individual probability ≤ 1:
+:::: {.column width="50%"}
+::: {.fragment}
+**Why These Rules Matter:**
 
-   $P(E_i)\le 1$
+- Ensure mathematical consistency
+- Enable probability calculations
+- Form foundation for statistics
+:::
+::::
+
+:::
 
 ::: {.notes}
 These formal features of probability were first defined by the Russian mathematician Andrei Kolmogorov. These are the features that a value has to have if it is going to be a probability.
@@ -226,7 +291,7 @@ The second point means that if we take the probability of each Ei and add them u
 
 Three main approaches:
 
-::: {.panel-tabset}
+::: {.incremental}
 ### Personal Belief
 
 - Based on knowledge and experience
@@ -248,6 +313,35 @@ Three main approaches:
 - Example: Fair six-sided die
   - P(rolling a 6) = 1/6
 - Mathematical approach
+:::
+
+## Probability Distributions: Free Throw Example {.smaller}
+
+Steph Curry's free throw success in 4 attempts:
+
+```{r}
+#| echo: false
+curry_df <- tibble(
+  numSuccesses = seq(0, 4)
+) |>
+  mutate(
+    Probability = dbinom(numSuccesses, size = 4, prob = 0.91),
+    CumulativeProbability = pbinom(numSuccesses, size = 4, prob = 0.91)
+  )
+
+kable(curry_df, caption='Simple and cumulative probability distributions', digits=4)
+```
+
+::: {.incremental}
+- **Understanding the Table**:
+  - numSuccesses: Number of successful free throws
+  - Probability: Chance of exactly that many successes
+  - CumulativeProbability: Chance of that many or fewer successes
+
+- **Key Insights**:
+  - Most likely outcome: 4 successes (0.6853)
+  - Very unlikely to make 0-2 shots (0.0421)
+  - Shows why Curry is considered elite
 :::
 
 ::: {.notes}
@@ -305,17 +399,17 @@ Time allocation: 8 minutes for this section
 
 As we increase the number of trials, our empirical probability approaches the true probability.
 
-```{webr}
+```{r}
 #| echo: false
 set.seed(12345)
 nsamples <- 1000
 sampDf <- tibble(
   trial_number = seq(nsamples),
   outcomes = rbinom(nsamples, 1, 0.5)
-) %>%
+) |>
   mutate(mean_probability = cumsum(outcomes) / seq_along(outcomes))
 
-ggplot(sampDf %>% slice(10:nsamples), 
+ggplot(sampDf |> slice(10:nsamples), 
        aes(x = trial_number, y = mean_probability)) +
   geom_hline(yintercept = 0.5, color = "blue", linetype = "dashed") +
   geom_line() +
@@ -327,14 +421,32 @@ ggplot(sampDf %>% slice(10:nsamples),
   theme_minimal()
 ```
 
+::: {.incremental}
+- **Understanding the Graph:**
+  - Blue line: True probability (0.5)
+  - Black line: Observed probability
+  - High variability with small samples
+  - Converges to true value over time
+
+- **The "Law of Small Numbers":**
+  - Common mistake: treating small samples like large ones
+  - Term coined by Kahneman and Tversky
+  - Even trained researchers make this error
+  - Early results can be misleading
+:::
+
 ::: {.fragment}
 **Real-World Example: 2017 Alabama Senate Election**
 
 - Early results highly volatile
-- Initial lead for Doug Jones
-- Then Roy Moore led for a period
-- Finally Jones took lead to win
-- Shows importance of waiting for sufficient data
+  * Initial large lead for Jones
+  * Switched to Moore leading
+  * Finally Jones won
+- Perfect illustration of why we need sufficient data
+- Applies to:
+  * Opinion polls
+  * Medical studies
+  * Market research
 :::
 
 ::: {.notes}
@@ -406,6 +518,56 @@ A famous gambling problem that helped develop probability theory:
    - He lost money on this bet
 :::
 
+## de Méré's Problem: Visual Analysis {.smaller}
+
+```{r}
+#| echo: false
+imgmtx <- matrix(0, nrow = 6, ncol = 6) 
+imgmtx[, 1] <- 1
+imgmtx[6, ] <- 1
+
+plot <- 
+  imgmtx |> 
+  melt() |> 
+  ggplot(aes(Var1, Var2, fill = value)) +
+  scale_fill_gradientn(colours=c("#0000FFFF","#FFFFFFFF","#FF0000FF")) +
+  geom_raster(interpolate = FALSE)
+
+for (i in seq(0.5, 6.5)) {
+  plot <- plot + geom_hline(yintercept = i, color = "white")
+  plot <- plot + geom_vline(xintercept = i, color = "white")
+  for (j in seq(0.5, 6.5)) {
+    plot <- plot + annotate(
+      "text", 
+      x = i + 0.5, y = 6.5 - j,
+      label = sprintf("%d,%d", i + 0.5, j + 0.5), 
+      color = "white")
+  }
+}
+
+plot +
+  theme_minimal() +
+  theme(
+    axis.line = element_blank(), 
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank(), 
+    axis.ticks = element_blank(),
+    legend.position = "none"
+  ) +
+  labs(
+    x = "Throw 1",
+    y = "Throw 2"
+  )
+```
+
+::: {.incremental}
+- Matrix shows all possible outcomes of two dice throws
+- Red cells: Getting a six on either throw
+- Blue cells: No sixes
+- White cell (6,6): Double six counted only once
+- Shows why simple addition is wrong
+:::
+
 ::: {.notes}
 This historical example introduces several key probability concepts:
 
@@ -453,18 +615,54 @@ Time allocation: 7 minutes
 - 2 minutes for implications
 :::
 
-## Conditional Probability
+## Conditional Probability {.smaller}
 
 The probability of an event occurring, given that another event has occurred.
 
-$P(A|B) = \frac{P(A \cap B)}{P(B)}$
+::: {.incremental}
+- **Formula**: $P(A|B) = \frac{P(A \cap B)}{P(B)}$
+  - $P(A|B)$ reads as "probability of A given B"
+  - $P(A \cap B)$ is the joint probability
+  - $P(B)$ is the overall probability of B
 
-::: {.fragment}
-**Example from 2016 US Presidential Election:**
+- **Visual Representation**:
+  - Total population splits into groups (e.g., voters by party)
+  - Each group further splits by outcome (e.g., voting choice)
+  - Conditional probability focuses on one branch
+:::
 
-- $P(Republican) = 0.44$
-- $P(Trump\ voter) = 0.46$
-- What is $P(Trump\ voter|Republican)$?
+## Health Data Example {.smaller}
+
+NHANES data on physical activity and diabetes:
+
+```{r}
+#| echo: false
+# Summarize NHANES data for diabetes and physical activity
+NHANES_diabetes_activity <- 
+  NHANES |> 
+  distinct(ID, .keep_all = TRUE) |> 
+  drop_na(PhysActive, Diabetes)
+
+NHANES_diabetes_stats_by_activity <- 
+  NHANES_diabetes_activity |> 
+  count(Diabetes, PhysActive) |> 
+  mutate(
+    prob = n / sum(n)
+  ) 
+
+kable(NHANES_diabetes_stats_by_activity, caption='Joint probabilities for Diabetes and Physical Activity')
+```
+
+::: {.incremental}
+- **Understanding the Data**:
+  - Joint probabilities show overlap between conditions
+  - Can calculate: $P(diabetes|inactive)$
+  - Shows real-world health relationships
+
+- **Key Insights**:
+  - Physical activity associated with lower diabetes risk
+  - Example of how conditional probability informs health research
+  - Useful for public health recommendations
 :::
 
 ::: {.notes}
@@ -475,19 +673,52 @@ Let's take the 2016 US Presidential election as an example. There are two simple
 To compute the conditional probability of A given B (which we write as P(A|B), "probability of A, given B"), we need to know the joint probability (that is, the probability of both A and B occurring) as well as the overall probability of B.
 :::
 
-## Independence
+## Independence {.smaller}
 
 Two events are independent if:
 
 $P(A|B) = P(A)$
 
 ::: {.fragment}
-**Example:**
+**Example 1: Political Independence**
 
 - California vs proposed state of Jefferson
 - $P(Jeffersonian) = 0.014$
 - $P(Californian) = 0.986$
 - Not independent: If you're Jeffersonian, you can't be Californian!
+:::
+
+## Independence: Health Example {.smaller}
+
+NHANES data on physical activity and mental health:
+
+```{r}
+#| echo: false
+# compute probabilities for mental health and physical activity
+NHANES_adult <- 
+  NHANES |> 
+  dplyr::filter(
+    Age >= 18,
+    !is.na(PhysActive),
+    !is.na(DaysMentHlthBad)
+  ) |> 
+  mutate(badMentalHealth = DaysMentHlthBad > 7,
+         badMentalHealth = case_when(
+      badMentalHealth == TRUE ~ "Bad Mental Health",
+      badMentalHealth == FALSE ~ "Good Mental Health"
+    )) 
+
+NHANES_mentalhealth_by_physactive_counts <- NHANES_adult |> tabyl(PhysActive, badMentalHealth) |> adorn_totals(c("row", "col"))
+
+kable(NHANES_mentalhealth_by_physactive_counts, caption='Mental health status by physical activity level')
+```
+
+::: {.incremental}
+- **Testing Independence**:
+  - Compare $P(bad\ mental\ health|active)$ vs $P(bad\ mental\ health)$
+  - If equal, variables would be independent
+  - Data shows they are not independent
+  - Physical and mental health are related
 :::
 
 ::: {.notes}
@@ -502,15 +733,31 @@ The new states might be politically independent, but they would not be statistic
 
 A powerful tool for updating probabilities based on new evidence:
 
-$P(B|A) = \frac{P(A|B)*P(B)}{P(A)}$
+::: {.incremental}
+- **Basic Form**: $P(B|A) = \frac{P(A|B)*P(B)}{P(A)}$
+
+- **Expanded Form**:
+  $P(B|A) = \frac{P(A|B)*P(B)}{P(A|B)*P(B) + P(A|\neg B)*P(\neg B)}$
+
+- **Components**:
+  - $P(B|A)$ = Updated probability (posterior)
+  - $P(A|B)$ = Likelihood of evidence
+  - $P(B)$ = Initial probability (prior)
+  - $P(A)$ = Overall probability of evidence
+:::
 
 ::: {.fragment}
-**Medical Screening Example:**
+**Medical Screening Example: PSA Test**
 
-- PSA test for prostate cancer
-- Sensitivity = $P(positive\ test|disease) = 0.8$
-- Specificity = $P(negative\ test|no\ disease) = 0.7$
-- Base rate $P(cancer) = 0.058$ for 60-year-old man
+- Given:
+  - Sensitivity = $P(positive|cancer) = 0.8$
+  - Specificity = $P(negative|no\ cancer) = 0.7$
+  - Base rate = $P(cancer) = 0.058$
+
+- Calculation:
+  - $P(cancer|positive) = \frac{0.8 * 0.058}{0.8*0.058 + 0.3*0.942}$
+  - $= 0.14$ (only 14% chance of cancer)
+  - Shows importance of considering base rates!
 :::
 
 ::: {.notes}
@@ -529,19 +776,31 @@ P(cancer|test) = (0.8*0.058)/(0.8*0.058 + 0.3*0.942) = 0.14
 That's pretty small -- do you find that surprising? Many people do, and in fact there is a substantial psychological literature showing that people systematically neglect base rates (i.e. overall prevalence) in their judgments.
 :::
 
-## Odds and Odds Ratios
+## Odds and Odds Ratios {.smaller}
 
 Converting between probability and odds:
 
-- Odds = $\frac{P(event)}{P(not\ event)}$
-- Probability = $\frac{odds}{1 + odds}$
+::: {.incremental}
+- **Formulas**:
+  - Odds = $\frac{P(event)}{P(not\ event)}$
+  - Probability = $\frac{odds}{1 + odds}$
+  - Odds Ratio = $\frac{posterior\ odds}{prior\ odds}$
+
+- **PSA Test Example Calculations**:
+  - Prior odds = $\frac{0.058}{1-0.058} = 0.061$
+  - Posterior odds = $\frac{0.14}{1-0.14} = 0.16$
+  - Odds ratio = $\frac{0.16}{0.061} = 2.62$
+:::
 
 ::: {.fragment}
-**Example from PSA test:**
+**Interpreting Results**:
 
-- Prior odds = 0.061
-- Posterior odds = 0.16
-- Odds ratio = 2.62 (increased risk after positive test)
+- Prior odds: 1:16 chance of cancer before test
+- Posterior odds: 1:6 chance after positive test
+- Odds ratio of 2.62 means:
+  * Risk increased 2.62 times
+  * But absolute risk still low (14%)
+  * Shows why screening rare conditions is problematic
 :::
 
 ::: {.notes}
