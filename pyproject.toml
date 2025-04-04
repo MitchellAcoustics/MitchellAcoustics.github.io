@@ -10,4 +10,5 @@ dependencies = [
     "pyyaml>=6.0.2",
     "fsspec>=2024.10.0",
     "loguru>=0.7.2",
+    "lets-plot>=4.6.2",
 ]

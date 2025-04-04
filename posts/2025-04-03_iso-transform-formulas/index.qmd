@@ -1,0 +1,779 @@
+---
+title: "A Robust Approach to Soundscape Circumplex Coordinate Projections"
+date: "2025-04-03"
+format: 
+    html:
+        embed-resources: true
+        code-fold: true
+    elsevier-pdf:
+        output-file: 'circumplex-formulae.pdf'
+        hyperrefoptions: 
+          - "citecolor=black"
+        echo: false
+        journal:
+            name: Working paper
+            formatting: preprint
+            model: 1p
+            cite-style: authoryear
+jupyter: python3
+bibliography: refs.bib
+citation: true
+---
+
+```{python}
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
+
+## Introduction
+
+The ISO 12913 series established a framework for soundscape assessment using a circumplex model with perceptual attributes arranged in a circular pattern. When adapting these methods for cross-cultural applications, we encountered significant challenges with the normalization factors that ensure coordinates remain within the desired range. This paper presents a mathematically rigorous solution to these challenges, ensuring consistent normalization across different language adaptations of the ISO soundscape attributes.
+
+## Analysis of Existing Normalization Methods
+
+### Original ISO Direct Differences Method
+
+The original method for calculating coordinates in the soundscape perceptual space was based on direct differences between opposing attributes:
+
+$$P = (p - a) + \cos45° \cdot (ca - ch) + \cos45° \cdot (v - m)$$
+$$E = (e - u) + \cos45° \cdot (ch - ca) + \cos45° \cdot (v - m)$$
+
+Where:
+
+- p = pleasant, a = annoying
+- e = eventful, u = uneventful
+- ca = calm, ch = chaotic
+- v = vibrant, m = monotonous
+
+A scaling factor of $\pm (4 + \sqrt{32})$ was used to normalize the coordinates to the range [-1, +1]. This scaling factor represents the maximum possible contribution from all terms in the formula:
+
+For a 5-point Likert scale (range 1-5), the maximum difference between opposing attributes is 4 (5-1). The direct opposition term contributes a maximum of 4 units, while each angled attribute pair contributes a maximum of 4 × cos45° ≈ 2.8284 units. The total maximum contribution is:
+
+4 + 2.8284 + 2.8284 = 9.6568 ≈ 4 + √32 ≈ 9.6569
+
+This approach works effectively with equally spaced attributes at 45° intervals but cannot be directly applied when attributes are arranged at different angles in cross-cultural translations.
+
+### SATP Trigonometric Formulation
+
+The Soundscape Attributes Translation Project (SATP) generalized the approach using a trigonometric formulation to accommodate varying angles and response ranges [@Aletta2024Soundscape]:
+
+$$P_{ISO} = \frac{1}{\lambda_{Pl}}\sum_{i=1}^{8}\cos(\theta_i) \times \xi_i$$
+
+$$E_{ISO} = \frac{1}{\lambda_{Ev}}\sum_{i=1}^{8}\sin(\theta_i) \times \xi_i$$
+
+With scaling factors:
+
+$$\lambda_{Pl} = \frac{\rho}{2}\sum_{i=1}^{8}|\cos(\theta_i)|$$
+
+$$\lambda_{Ev} = \frac{\rho}{2}\sum_{i=1}^{8}|\sin(\theta_i)|$$
+
+Where:
+
+- $\theta_i$ is the angle for each circumplex scale
+- $\xi_i$ is the score for each scale
+- $\rho$ is the range of possible response values (e.g., $\rho = 4$ for a 5-point Likert scale)
+
+This generalization was a significant advancement, but our testing revealed limitations when dealing with uneven angle distributions.
+
+## Identification of Specific Limitations
+
+### Uneven Angle Distribution Problem
+
+In cross-cultural adaptations, translated attributes may cluster in certain quadrants of the circumplex rather than being evenly distributed. For example, the Indonesian translation has the following angle distribution:
+
+```{python}
+# | echo: false
+angles = [0, 53, 104, 123, 139, 202, 284, 308]
+attributes = [
+    "pleasant",
+    "vibrant",
+    "eventful",
+    "chaotic",
+    "annoying",
+    "monotonous",
+    "uneventful",
+    "calm",
+]
+theta = np.deg2rad(angles)
+r = np.ones(len(angles))
+
+fig, ax = plt.subplots(subplot_kw={"projection": "polar"})
+ax.set_xticks(theta)
+ax.set_xticklabels([f"{attr} ({angle}°)" for attr, angle in zip(attributes, angles)])
+plt.show()
+```
+
+Let's implement the original SATP approach to demonstrate the issues:
+
+```{python}
+def original_iso_coordinates(angles, scores, score_range=(1, 5)):
+    """
+    Calculate ISO coordinates using the original SATP approach
+    
+    Parameters:
+    angles (array): Array of angles in degrees for the 8 scales
+    scores (array): Array of scores for each scale
+    score_range (tuple): Min and max of the score range (default: 1-5 Likert scale)
+    
+    Returns:
+    tuple: (ISO Pleasant, ISO Eventful) coordinates
+    """
+    angles_rad = np.radians(angles)
+    rho = score_range[1] - score_range[0]
+    
+    # Numerators
+    numerator_pleasant = np.sum(np.cos(angles_rad) * scores)
+    numerator_eventful = np.sum(np.sin(angles_rad) * scores)
+    
+    # Denominators (lambda values)
+    denominator_pleasant = (rho / 2) * np.sum(np.abs(np.cos(angles_rad)))
+    denominator_eventful = (rho / 2) * np.sum(np.abs(np.sin(angles_rad)))
+    
+    # ISO coordinates
+    iso_pleasant = numerator_pleasant / denominator_pleasant
+    iso_eventful = numerator_eventful / denominator_eventful
+    
+    return iso_pleasant, iso_eventful
+```
+
+### Maximum Value Exceedance Problem
+
+When dealing with unevenly spaced attributes, the SATP method can produce coordinates outside the range of [-1, 1] with certain combinations of responses. To demonstrate this, we'll create functions that generate score sets designed to produce maximum/minimum pleasantness and eventfulness:
+
+```{python}
+def max_pleasantness(angles, score_range=(1, 5)):
+    """Generate scores that should produce maximum pleasantness"""
+    scores = []    
+    rad_angles = np.radians(angles)    
+    for angle in rad_angles:
+        if np.cos(angle) >= 0:
+            scores.append(score_range[1])  # Maximum score
+        else:
+            scores.append(score_range[0])  # Minimum score
+    return np.array(scores)
+
+def min_pleasantness(angles, score_range=(1, 5)):
+    """Generate scores that should produce minimum pleasantness"""
+    scores = []    
+    rad_angles = np.radians(angles)    
+    for angle in rad_angles:
+        if np.cos(angle) >= 0:
+            scores.append(score_range[0])  # Minimum score
+        else:
+            scores.append(score_range[1])  # Maximum score
+    return np.array(scores)
+
+def max_eventfulness(angles, score_range=(1, 5)):
+    """Generate scores that should produce maximum eventfulness"""
+    scores = []    
+    rad_angles = np.radians(angles)    
+    for angle in rad_angles:
+        if np.sin(angle) >= 0:
+            scores.append(score_range[1])  # Maximum score
+        else:
+            scores.append(score_range[0])  # Minimum score
+    return np.array(scores)        
+    
+def min_eventfulness(angles, score_range=(1, 5)):
+    """Generate scores that should produce minimum eventfulness"""
+    scores = []    
+    rad_angles = np.radians(angles)    
+    for angle in rad_angles:
+        if np.sin(angle) >= 0:
+            scores.append(score_range[0])  # Minimum score
+        else:
+            scores.append(score_range[1])  # Maximum score
+    return np.array(scores)
+```
+
+Testing with evenly and unevenly spaced angles:
+
+```{python}
+# Standard equally spaced angles (45° increments)
+equal_angles = np.array([0, 45, 90, 135, 180, 225, 270, 315])
+
+# Example of uneven angles (Indonesian translation)
+uneven_angles = np.array([0, 53, 104, 123, 139, 202, 284, 308])
+
+# Test extreme cases
+test_directions = ["max_pleasant", "min_pleasant", "max_eventful", "min_eventful"]
+results = {}
+
+for direction in test_directions:
+    if direction == "max_pleasant":
+        equal_scores = max_pleasantness(equal_angles)
+        uneven_scores = max_pleasantness(uneven_angles)
+    elif direction == "min_pleasant":
+        equal_scores = min_pleasantness(equal_angles)
+        uneven_scores = min_pleasantness(uneven_angles)
+    elif direction == "max_eventful":
+        equal_scores = max_eventfulness(equal_angles)
+        uneven_scores = max_eventfulness(uneven_angles)
+    elif direction == "min_eventful":
+        equal_scores = min_eventfulness(equal_angles)
+        uneven_scores = min_eventfulness(uneven_angles)
+        
+    equal_coords = original_iso_coordinates(equal_angles, equal_scores)
+    uneven_coords = original_iso_coordinates(uneven_angles, uneven_scores)
+    
+    results[f"{direction}_equal"] = equal_coords
+    results[f"{direction}_uneven"] = uneven_coords
+    
+    print(f"With scores that should produce {direction}:")
+    print(f"  Equal angles: P={equal_coords[0]:.2f}, E={equal_coords[1]:.2f}")
+    print(f"  Uneven angles: P={uneven_coords[0]:.2f}, E={uneven_coords[1]:.2f}")
+    print()
+```
+
+For the Indonesian angles, the SATP formulation produces a maximum $E_{ISO}$ value of 1.31, exceeding the expected 1.00 bound. Similarly, the minimum $E_{ISO}$ value is only -0.69, not reaching the expected -1.00. This occurs because the angles are unevenly distributed across the positive and negative $E_{ISO}$ hemispheres, with more attributes contributing positively to $E_{ISO}$ than negatively.
+
+### Neutral Score Displacement Issue
+
+Another critical issue is that neutral scores (all middle values) don't map to the origin (0,0) when angles are unevenly distributed:
+
+```{python}
+# Neutral scores (all 3's on a 1-5 scale)
+neutral_scores = np.ones(8) * 3
+
+# Calculate coordinates with equally spaced angles
+equal_coords = original_iso_coordinates(equal_angles, neutral_scores)
+print("With equally spaced angles and neutral scores:")
+print(f"Pleasantness: {equal_coords[0]:.4f}")
+print(f"Eventfulness: {equal_coords[1]:.4f}")
+
+# Calculate coordinates with uneven angles
+uneven_coords = original_iso_coordinates(uneven_angles, neutral_scores)
+print("\nWith unevenly spaced angles and neutral scores:")
+print(f"Pleasantness: {uneven_coords[0]:.4f}")
+print(f"Eventfulness: {uneven_coords[1]:.4f}")
+```
+
+With evenly spaced angles, neutral scores correctly map to (0,0). However, with unevenly distributed angles, we get non-zero coordinates even with neutral scores, which is problematic for interpretation and cross-cultural comparability.
+
+## Development of Robust Normalization
+
+### Mathematical Derivation from First Principles
+
+To address these limitations, we developed a new approach that guarantees coordinates within the [-1, +1] range regardless of angle distribution and ensures neutral scores always map to the origin. Our derivation follows a two-stage normalization process:
+
+#### Stage 1: Normalize Scores to [-1, +1]
+
+For a scale with values in range [min, max], we first normalize all scores to the [-1, +1] range:
+
+1. Center around the midpoint: subtract (min + max)/2
+2. Scale by half the range: divide by (max - min)/2
+
+For a standard 5-point Likert scale [1, 5], this gives:
+
+$$\hat{\xi}_i = \frac{\xi_i - 3}{2}$$
+
+This ensures that neutral scores (e.g., all 3's on a 1-5 scale) are mapped to 0, which is essential for proper origin placement.
+
+#### Stage 2: Project and Scale by Maximum Possible Projection
+
+We then project these normalized scores using trigonometric functions:
+
+$$P_{raw} = \sum_{i=1}^{n} \cos(\theta_i) \times \hat{\xi_i}$$
+$$E_{raw} = \sum_{i=1}^{n} \sin(\theta_i) \times \hat{\xi_i}$$
+
+The maximum projection in any direction is determined by the sum of absolute trigonometric values:
+
+$$P_{max} = \sum_{i=1}^{n} |\cos(\theta_i)|$$
+$$E_{max} = \sum_{i=1}^{n} |\sin(\theta_i)|$$
+
+Dividing by these values ensures coordinates stay within [-1, +1]:
+
+$$P_{ISO} = \frac{P_{raw}}{P_{max}} = \frac{\sum_{i=1}^{n} \cos(\theta_i) \times \hat{\xi}_i}{\sum_{i=1}^{n} |\cos(\theta_i)|}$$
+
+### Final Formulation
+
+Substituting our definition of $\hat{\xi}_i$ for a general scale with range [min, max]:
+
+$$P_{ISO} = \frac{\sum_{i=1}^{n} \cos(\theta_i) \cdot (\xi_i - \mu)}{\rho \cdot \sum_{i=1}^{n} |\cos(\theta_i)|}$$
+
+$$E_{ISO} = \frac{\sum_{i=1}^{n} \sin(\theta_i) \cdot (\xi_i - \mu)}{\rho \cdot \sum_{i=1}^{n} |\sin(\theta_i)|}$$
+
+Where:
+
+- $\mu = \frac{\min + \max}{2}$ is the midpoint of the scale
+- $\rho = \frac{\max - \min}{2}$ is half the range of the scale
+
+## Implementation and Validation
+
+### Computational Implementation
+
+```{python}
+# | code-fold: false
+def robust_iso_coordinates(angles, scores, score_range=(1, 5)):
+    """
+    Calculate ISO coordinates using our robust normalization approach
+
+    Parameters:
+    angles (array): Array of angles in degrees for the 8 scales
+    scores (array): Array of scores for each scale
+    score_range (tuple): Min and max of the score range (default: 1-5 Likert scale)
+
+    Returns:
+    tuple: (ISO Pleasant, ISO Eventful) coordinates
+    """
+    angles_rad = np.radians(angles)
+
+    # Calculate scale parameters
+    min_val, max_val = score_range
+    midpoint = (min_val + max_val) / 2
+    half_range = (max_val - min_val) / 2
+
+    # Stage 1: Normalize scores to [-1, 1]
+    norm_scores = (scores - midpoint) / half_range
+
+    # Stage 2: Project and scale by maximum possible projection
+    p_num = np.sum(np.cos(angles_rad) * norm_scores)
+    e_num = np.sum(np.sin(angles_rad) * norm_scores)
+
+    p_den = np.sum(np.abs(np.cos(angles_rad)))
+    e_den = np.sum(np.abs(np.sin(angles_rad)))
+
+    return (p_num / p_den, e_num / e_den)
+```
+
+### Neutral Score Response Testing
+
+```{python}
+# Calculate coordinates with our robust formula
+robust_equal_coords = robust_iso_coordinates(equal_angles, neutral_scores)
+robust_uneven_coords = robust_iso_coordinates(uneven_angles, neutral_scores)
+
+print("Neutral score handling comparison:")
+print("\nWith equally spaced angles:")
+print(f"Original approach: P={equal_coords[0]:.4f}, E={equal_coords[1]:.4f}")
+print(f"Robust approach:   P={robust_equal_coords[0]:.4f}, E={robust_equal_coords[1]:.4f}")
+
+print("\nWith unevenly spaced angles:")
+print(f"Original approach: P={uneven_coords[0]:.4f}, E={uneven_coords[1]:.4f}")
+print(f"Robust approach:   P={robust_uneven_coords[0]:.4f}, E={robust_uneven_coords[1]:.4f}")
+```
+
+Our robust approach correctly maps neutral scores to (0,0) regardless of angle distribution, solving the neutral score displacement issue.
+
+### Boundary Condition Verification
+
+```{python}
+# Test with equally spaced angles
+max_p_scores = max_pleasantness(equal_angles)
+min_p_scores = min_pleasantness(equal_angles)
+max_e_scores = max_eventfulness(equal_angles)
+min_e_scores = min_eventfulness(equal_angles)
+
+print("Boundary condition tests with equally spaced angles:")
+print(f"Max Pleasant: {robust_iso_coordinates(equal_angles, max_p_scores)[0]:.4f}")
+print(f"Min Pleasant: {robust_iso_coordinates(equal_angles, min_p_scores)[0]:.4f}")
+print(f"Max Eventful: {robust_iso_coordinates(equal_angles, max_e_scores)[1]:.4f}")
+print(f"Min Eventful: {robust_iso_coordinates(equal_angles, min_e_scores)[1]:.4f}")
+
+# Test with uneven angles
+max_p_scores = max_pleasantness(uneven_angles)
+min_p_scores = min_pleasantness(uneven_angles)
+max_e_scores = max_eventfulness(uneven_angles)
+min_e_scores = min_eventfulness(uneven_angles)
+
+print("\nBoundary condition tests with unevenly spaced angles:")
+print(f"Max Pleasant: {robust_iso_coordinates(uneven_angles, max_p_scores)[0]:.4f}")
+print(f"Min Pleasant: {robust_iso_coordinates(uneven_angles, min_p_scores)[0]:.4f}")
+print(f"Max Eventful: {robust_iso_coordinates(uneven_angles, max_e_scores)[1]:.4f}")
+print(f"Min Eventful: {robust_iso_coordinates(uneven_angles, min_e_scores)[1]:.4f}")
+```
+
+Our formula correctly maps extreme scores to exactly +1 or -1, regardless of angle distribution, solving the maximum value exceedance problem.
+
+### Compatibility with Original ISO Method
+
+To verify backward compatibility, we'll compare our approach with the original ISO direct differences method when using evenly spaced angles:
+
+```{python}
+def iso_direct_differences(scores):
+    """
+    Calculate ISO coordinates using the original direct differences method
+    
+    Parameters:
+    scores (array): Array of 8 scores in order [pleasant, vibrant, eventful, chaotic,
+                    annoying, monotonous, uneventful, calm]
+    
+    Returns:
+    tuple: (ISO Pleasant, ISO Eventful) coordinates
+    """
+    # Extract scores for specific attributes
+    p = scores[0]  # pleasant (0°)
+    v = scores[1]  # vibrant (45°)
+    e = scores[2]  # eventful (90°)
+    ch = scores[3]  # chaotic (135°)
+    a = scores[4]  # annoying (180°)
+    m = scores[5]  # monotonous (225°)
+    u = scores[6]  # uneventful (270°)
+    ca = scores[7]  # calm (315°)
+
+    # Calculate using direct differences formula
+    cos45 = np.cos(np.radians(45))
+    pleasant = (p - a) + cos45 * (ca - ch) + cos45 * (v - m)
+    eventful = (e - u) + cos45 * (ch - ca) + cos45 * (v - m)
+
+    # Normalize to [-1, +1] range
+    scaling_factor = 4 + np.sqrt(32)
+    pleasant = pleasant / scaling_factor
+    eventful = eventful / scaling_factor
+
+    return (pleasant, eventful)
+
+def run_compatibility_simulation(num_iterations=5000):
+    """
+    Run a Monte Carlo simulation to verify compatibility between original ISO direct differences
+    and our robust approach when using evenly spaced angles
+    
+    Parameters:
+    num_iterations (int): Number of simulation iterations
+    
+    Returns:
+    dict: Dictionary with simulation results
+    """
+    # Evenly spaced angles (45° increments)
+    equal_angles = np.array([0, 45, 90, 135, 180, 225, 270, 315])
+    
+    # Storage for results
+    results = {
+        'direct_pleasant': [],
+        'direct_eventful': [],
+        'robust_pleasant': [],
+        'robust_eventful': []
+    }
+    
+    for _ in range(num_iterations):
+        # Generate random scores (8 scores between 1 and 5)
+        scores = np.random.uniform(1, 5, 8)
+        
+        # Calculate coordinates with both methods
+        direct_coords = iso_direct_differences(scores)
+        robust_coords = robust_iso_coordinates(equal_angles, scores)
+        
+        # Store results
+        results['direct_pleasant'].append(direct_coords[0])
+        results['direct_eventful'].append(direct_coords[1])
+        results['robust_pleasant'].append(robust_coords[0])
+        results['robust_eventful'].append(robust_coords[1])
+    
+    return results
+
+# Run compatibility simulation
+np.random.seed(42)  # For reproducibility
+compat_results = run_compatibility_simulation(5000)
+
+# Calculate statistics
+direct_p_mean = np.mean(compat_results['direct_pleasant'])
+direct_p_std = np.std(compat_results['direct_pleasant'])
+robust_p_mean = np.mean(compat_results['robust_pleasant'])
+robust_p_std = np.std(compat_results['robust_pleasant'])
+
+direct_e_mean = np.mean(compat_results['direct_eventful'])
+direct_e_std = np.std(compat_results['direct_eventful'])
+robust_e_mean = np.mean(compat_results['robust_eventful'])
+robust_e_std = np.std(compat_results['robust_eventful'])
+
+print("Compatibility Statistics (with evenly spaced angles):")
+print("\nPleasantness:")
+print(f"Direct differences method: mean={direct_p_mean:.4f}, std={direct_p_std:.4f}")
+print(f"Robust approach:           mean={robust_p_mean:.4f}, std={robust_p_std:.4f}")
+print(f"Difference in means:       {abs(direct_p_mean - robust_p_mean):.4f}")
+print(f"Ratio of standard deviations: {direct_p_std/robust_p_std:.4f}")
+
+print("\nEventfulness:")
+print(f"Direct differences method: mean={direct_e_mean:.4f}, std={direct_e_std:.4f}")
+print(f"Robust approach:           mean={robust_e_mean:.4f}, std={robust_e_std:.4f}")
+print(f"Difference in means:       {abs(direct_e_mean - robust_e_mean):.4f}")
+print(f"Ratio of standard deviations: {direct_e_std/robust_e_std:.4f}")
+
+# Visualize the compatibility
+fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+
+# Scatter plot
+axes[0].scatter(compat_results['direct_pleasant'], compat_results['direct_eventful'], 
+               alpha=0.3, s=3, c='blue', label='Direct Differences')
+axes[0].scatter(compat_results['robust_pleasant'], compat_results['robust_eventful'], 
+               alpha=0.3, s=3, c='red', label='Robust Method')
+axes[0].set_xlim(-1.1, 1.1)
+axes[0].set_ylim(-1.1, 1.1)
+axes[0].axhline(y=0, color='k', linestyle='-', alpha=0.2)
+axes[0].axvline(x=0, color='k', linestyle='-', alpha=0.2)
+axes[0].grid(alpha=0.2)
+axes[0].set_title('Comparison with Evenly Spaced Angles')
+axes[0].set_xlabel('ISO Pleasant')
+axes[0].set_ylabel('ISO Eventful')
+axes[0].legend()
+
+# Draw circle boundary at radius 1
+circle = plt.Circle((0, 0), 1, fill=False, linestyle='-', color='black', alpha=0.7)
+axes[0].add_patch(circle)
+
+# Distribution comparison
+pleasant_bins = np.linspace(-1, 1, 50)
+eventful_bins = np.linspace(-1, 1, 50)
+
+axes[1].hist(compat_results['direct_pleasant'], bins=pleasant_bins, alpha=0.5, color='blue', label='Direct (P)')
+axes[1].hist(compat_results['robust_pleasant'], bins=pleasant_bins, alpha=0.5, color='red', label='Robust (P)')
+axes[1].hist(compat_results['direct_eventful'], bins=eventful_bins, alpha=0.5, color='green', label='Direct (E)')
+axes[1].hist(compat_results['robust_eventful'], bins=eventful_bins, alpha=0.5, color='orange', label='Robust (E)')
+axes[1].set_title('Distribution of Coordinates')
+axes[1].set_xlabel('Coordinate Value')
+axes[1].set_ylabel('Frequency')
+axes[1].legend()
+
+plt.tight_layout()
+```
+
+The statistics and visualizations demonstrate that our robust approach produces results that are statistically equivalent to the original ISO direct differences method when using evenly spaced angles, confirming backward compatibility.
+
+### Monte Carlo Simulation
+
+To thoroughly test our approach against the original SATP method, we'll run a Monte Carlo simulation with thousands of random angle configurations and score combinations:
+
+```{python}
+def run_monte_carlo_simulation(num_iterations=5000):
+    """
+    Run a Monte Carlo simulation to verify that coordinates always fall within [-1, +1] range
+    
+    Parameters:
+    num_iterations (int): Number of simulation iterations
+    
+    Returns:
+    dict: Dictionary with simulation results
+    """
+    # Storage for results
+    results = {
+        'original_pleasant': [],
+        'original_eventful': [],
+        'robust_pleasant': [],
+        'robust_eventful': [],
+        'original_out_of_range': 0,
+        'robust_out_of_range': 0
+    }
+    
+    for _ in range(num_iterations):
+        # Generate random angles (8 angles between 0 and 360)
+        angles = np.random.uniform(0, 360, 8)
+        
+        # Generate random scores (8 scores between 1 and 5)
+        scores = np.random.uniform(1, 5, 8)
+        
+        # Calculate ISO coordinates with both methods
+        orig_coords = original_iso_coordinates(angles, scores)
+        robust_coords = robust_iso_coordinates(angles, scores)
+        
+        # Store results
+        results['original_pleasant'].append(orig_coords[0])
+        results['original_eventful'].append(orig_coords[1])
+        results['robust_pleasant'].append(robust_coords[0])
+        results['robust_eventful'].append(robust_coords[1])
+        
+        # Check if any coordinates are out of range
+        if abs(orig_coords[0]) > 1 or abs(orig_coords[1]) > 1:
+            results['original_out_of_range'] += 1
+        
+        if abs(robust_coords[0]) > 1 or abs(robust_coords[1]) > 1:
+            results['robust_out_of_range'] += 1
+    
+    return results
+
+# Run simulation
+np.random.seed(42)  # For reproducibility
+sim_results = run_monte_carlo_simulation(5000)
+
+# Report results
+print("\nMonte Carlo Simulation Results (5000 iterations):")
+print(f"Original SATP approach out-of-range instances: {sim_results['original_out_of_range']} ({sim_results['original_out_of_range']/50:.2f}%)")
+print(f"Robust approach out-of-range instances: {sim_results['robust_out_of_range']} ({sim_results['robust_out_of_range']/50:.2f}%)")
+
+# Visualize the simulation results
+fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+
+# Plot original SATP approach results
+scatter1 = axes[0].scatter(sim_results['original_pleasant'], sim_results['original_eventful'], 
+                          alpha=0.3, s=5, c=np.abs(np.array(sim_results['original_pleasant'])) + np.abs(np.array(sim_results['original_eventful'])))
+axes[0].set_xlim(-1.5, 1.5)
+axes[0].set_ylim(-1.5, 1.5)
+axes[0].axhline(y=0, color='k', linestyle='-', alpha=0.2)
+axes[0].axvline(x=0, color='k', linestyle='-', alpha=0.2)
+axes[0].grid(alpha=0.2)
+axes[0].set_title('Original SATP Approach')
+axes[0].set_xlabel('ISO Pleasant')
+axes[0].set_ylabel('ISO Eventful')
+
+# Draw circle boundary at radius 1
+circle1 = plt.Circle((0, 0), 1, fill=False, linestyle='-', color='red', alpha=0.7)
+axes[0].add_patch(circle1)
+
+# Plot robust approach results
+scatter2 = axes[1].scatter(sim_results['robust_pleasant'], sim_results['robust_eventful'], 
+                          alpha=0.3, s=5, c=np.abs(np.array(sim_results['robust_pleasant'])) + np.abs(np.array(sim_results['robust_eventful'])))
+axes[1].set_xlim(-1.5, 1.5)
+axes[1].set_ylim(-1.5, 1.5)
+axes[1].axhline(y=0, color='k', linestyle='-', alpha=0.2)
+axes[1].axvline(x=0, color='k', linestyle='-', alpha=0.2)
+axes[1].grid(alpha=0.2)
+axes[1].set_title('New Robust Approach')
+axes[1].set_xlabel('ISO Pleasant')
+axes[1].set_ylabel('ISO Eventful')
+
+# Draw circle boundary at radius 1
+circle2 = plt.Circle((0, 0), 1, fill=False, linestyle='-', color='red', alpha=0.7)
+axes[1].add_patch(circle2)
+
+# Add colorbars
+plt.colorbar(scatter1, ax=axes[0], label='Distance from origin')
+plt.colorbar(scatter2, ax=axes[1], label='Distance from origin')
+
+plt.tight_layout()
+```
+
+The simulation results clearly demonstrate that our robust approach guarantees coordinates within the unit circle, while the original SATP approach can produce out-of-range values with certain angle configurations.
+
+## Cross-Cultural Application Analysis
+
+To evaluate the practical impact of our normalization approach, we'll examine how the two methods affect the positioning of soundscapes using angle configurations from different language translations:
+
+```{python}
+# Define language examples from cross-cultural research
+languages = {
+    "English": np.array([0, 46, 94, 138, 177, 231, 275, 340]),
+    "Chinese": np.array([0, 18, 38, 154, 167, 201, 242, 308]),
+    "Indonesian": np.array([0, 53, 104, 123, 139, 202, 284, 308]),
+    "German": np.array([0, 64, 97, 132, 182, 254, 282, 336]),
+    "Italian": np.array([0, 57, 104, 142, 170, 274, 285, 336]),
+}
+
+# Balanced scores that should give a moderate vibrant result
+balanced_scores = np.array([4, 4, 4, 3, 2, 2, 2, 3])
+
+# Visualize the impact across languages
+fig, ax = plt.subplots(figsize=(10, 10))
+
+# Draw circles and axes
+circle = plt.Circle((0, 0), 1, fill=False, linestyle="-", color="black", alpha=0.3)
+ax.add_patch(circle)
+ax.axhline(y=0, color="gray", linestyle="--", alpha=0.5)
+ax.axvline(x=0, color="gray", linestyle="--", alpha=0.5)
+
+# Colors for different languages
+colors = ["red", "blue", "green", "purple", "orange"]
+markers = ["o", "s", "^", "D", "v"]
+
+iso_direct_coords = iso_direct_differences(balanced_scores)
+ax.plot(
+    iso_direct_coords[0],
+    iso_direct_coords[1],
+    marker="o",
+    color="black",
+    linestyle="",
+    markersize=10,
+    alpha=0.5,
+    label="ISO 2018 Direct Differences",
+)
+
+# Add legend for the direct differences
+ax.legend(bbox_to_anchor=(1.05, 1), loc="upper left")
+
+# Plot points for each language
+for i, (lang, angles) in enumerate(languages.items()):
+    # Calculate with different methods
+    orig_coords = original_iso_coordinates(angles, balanced_scores)
+    robust_coords = robust_iso_coordinates(angles, balanced_scores)
+
+    # Plot the points
+    ax.plot(
+        orig_coords[0],
+        orig_coords[1],
+        marker=markers[i],
+        color=colors[i],
+        linestyle="",
+        markersize=10,
+        alpha=0.5,
+        label=f"{lang} (Original)",
+    )
+    ax.plot(
+        robust_coords[0],
+        robust_coords[1],
+        marker="*",
+        color=colors[i],
+        linestyle="",
+        markersize=15,
+        label=f"{lang} (Robust)",
+    )
+
+    # Connect the points
+    ax.plot(
+        [orig_coords[0], robust_coords[0]],
+        [orig_coords[1], robust_coords[1]],
+        color=colors[i],
+        linestyle="-",
+        alpha=0.3,
+    )
+
+# Add labels and title
+ax.set_xlabel("ISO Pleasant")
+ax.set_ylabel("ISO Eventful")
+ax.set_title(
+    "Impact of Normalization Approaches on Soundscape Coordinates\nAcross Different Languages"
+)
+
+# Set equal aspect and limits
+ax.set_aspect("equal")
+ax.set_xlim(-1.1, 1.1)
+ax.set_ylim(-1.1, 1.1)
+
+# Add legend
+ax.legend(bbox_to_anchor=(1.05, 1), loc="upper left")
+
+# Label the four quadrants
+ax.text(0.7, 0.7, "Vibrant", ha="center", fontsize=10)
+ax.text(-0.7, 0.7, "Chaotic", ha="center", fontsize=10)
+ax.text(-0.7, -0.7, "Monotonous", ha="center", fontsize=10)
+ax.text(0.7, -0.7, "Calm", ha="center", fontsize=10)
+
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+```
+
+This visualization reveals that the choice of normalization approach can significantly affect the relative positioning of soundscapes on the circumplex model across different languages. The robust approach ensures consistent normalization regardless of the angle distribution, which is essential for valid cross-cultural comparisons.
+
+## Technical Discussion and Recommendations
+
+### Mathematical Analysis
+
+Our formula succeeds where the original SATP approach fell short for two key reasons:
+
+1. **Proper Handling of Neutral Scores**: By explicitly subtracting the midpoint of the scale before projection, we ensure that neutral scores always map to the origin (0,0) regardless of angle distribution. With the original approach, neutral scores can produce non-zero coordinates when angles are unevenly distributed.
+
+2. **Correct Scaling for Maximum Projection**: By first normalizing scores to the [-1, +1] range and then dividing by the sum of absolute trigonometric values, we account for the maximum possible projection in both positive and negative directions. This two-stage approach handles uneven angle distributions appropriately.
+
+The essential mathematical insight is separating the score normalization from the projection normalization. This approach recognizes that the maximum possible projection depends on the absolute sum of trigonometric values, which properly accounts for attributes that might be clustered predominantly in one part of the circumplex.
+
+### Standardization Recommendations
+
+Through rigorous mathematical derivation and extensive testing, we have developed a robust approach to soundscape normalization that:
+
+1. Guarantees coordinates within the [-1, +1] range for any angle configuration
+2. Correctly maps neutral scores to the origin
+3. Properly handles cross-cultural adaptations with uneven angle distributions
+4. Works for any input scale range
+5. Maintains backward compatibility with the original ISO method
+
+We recommend adopting this formulation in the revised ISO 12913-3 standard to ensure accurate and comparable soundscape assessment across different languages and cultural contexts. The final formulas:
+
+$$P_{ISO} = \frac{\sum_{i=1}^{n} \cos(\theta_i) \cdot (\xi_i - \mu)}{\rho \cdot \sum_{i=1}^{n} |\cos(\theta_i)|}$$
+
+$$E_{ISO} = \frac{\sum_{i=1}^{n} \sin(\theta_i) \cdot (\xi_i - \mu)}{\rho \cdot \sum_{i=1}^{n} |\sin(\theta_i)|}$$
+
+Where:
+
+- $\mu = \frac{\min + \max}{2}$ is the midpoint of the scale
+- $\rho = \frac{\max - \min}{2}$ is half the range of the scale
+
+This approach provides a solid mathematical foundation for cross-cultural soundscape research and ensures the validity of the circumplex model in diverse applications.

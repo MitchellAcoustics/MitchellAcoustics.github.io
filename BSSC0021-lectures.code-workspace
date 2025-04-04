@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"notebook.formatOnSave.enabled": true,
+		"notebook.defaultFormatter": "charliermarsh.ruff",
+		"notebook.formatOnCellExecution": true
+	}
+}

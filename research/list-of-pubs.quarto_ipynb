@@ -19,7 +19,7 @@
         "\n",
         "You can download my PhD Thesis, titled [*Predictive Modelling of Complex Urban Soundscapes: Enabling an engineeering approach to soundscape design*](./Andrew%20Mitchell%20PhD%20Thesis%20Final.pdf).\n"
       ],
-      "id": "8612570e"
+      "id": "dc8d1085"
     },
     {
       "cell_type": "code",
@@ -39,11 +39,57 @@
         "    return f\"{', '.join(map(str, a))}, and {b}\"\n",
         "\n",
         "\n",
+        "def get_bib_entries(bib_file):\n",
+        "    f = open(bib_file, \"r\")\n",
+        "    entries = {}\n",
+        "    for x in f:\n",
+        "        if x.strip().startswith(\"@\"):\n",
+        "            id = x.split(\"{\")[1].split(\",\")[0]\n",
+        "            entries[id] = \"\"\n",
+        "        elif x.startswith((\"}\", \"\\n\")):\n",
+        "            continue\n",
+        "        elif \"Crossref\" in x:\n",
+        "            continue\n",
+        "        elif x.strip().startswith(\n",
+        "            (\n",
+        "                \"annotation\",\n",
+        "                \"file\",\n",
+        "                \"timestamp\",\n",
+        "                \"qualityassured\",\n",
+        "                \"keywords\",\n",
+        "                \"abstract\",\n",
+        "                \"TLDR\",\n",
+        "            )\n",
+        "        ):\n",
+        "            continue\n",
+        "        elif x.strip() == \"}\":\n",
+        "            continue\n",
+        "        else:\n",
+        "            entries[id] += x.strip()\n",
+        "    f.close()\n",
+        "    return entries\n",
+        "\n",
+        "\n",
+        "def get_bib_entry(entries, id):\n",
+        "    try:\n",
+        "        return entries[id]\n",
+        "    except:\n",
+        "        return None\n",
+        "\n",
+        "\n",
         "def button(url, str, icon):\n",
         "    icon_base = icon[:2]\n",
         "    return f\"\"\"<a class=\"btn btn-outline-dark btn-sm\", href=\"{url}\" target=\"_blank\" rel=\"noopener noreferrer\">\n",
         "        <i class=\"{icon_base} {icon}\" role='img' aria-label='{str}'></i>\n",
         "        {str}\n",
+        "    </a>\"\"\"\n",
+        "\n",
+        "\n",
+        "def button_copy_to_text(label, entry, icon):\n",
+        "    icon_base = icon[:2]\n",
+        "    return f\"\"\"<a class=\"btn btn-outline-dark btn-sm\" onclick=\"copyToClipboard('{entry}')\">\n",
+        "        <i class=\"{icon_base} {icon}\" role='img' aria-label='{label}'></i>\n",
+        "        {label}\n",
         "    </a>\"\"\"\n",
         "\n",
         "\n",
@@ -61,6 +107,7 @@
         "\n",
         "me = \"Andrew Mitchell\"\n",
         "yaml_data = yaml.safe_load(open(\"MitchellPublications.yaml\"))\n",
+        "bib_entries = get_bib_entries(\"MitchellPublications.bib\")\n",
         "pub_strs = {\"pubs\": {}, \"confs\": {}, \"others\": {}}\n",
         "\n",
         "excepts = {}\n",
@@ -97,6 +144,8 @@
         "        journal_pub = entry_type == \"article-journal\"\n",
         "        conf_pub = entry_type == \"paper-conference\"\n",
         "\n",
+        "        bib_entry = get_bib_entry(bib_entries, data[\"id\"])\n",
+        "\n",
         "        pub_str = f'{author_str}. ({year_str}) \"{title_str}.\"'\n",
         "\n",
         "        if journal is not None:\n",
@@ -121,6 +170,11 @@
         "            elif pub_url is not None:\n",
         "                buttons.append(button(pub_url, \"Published\", \"bi-journal-text\"))\n",
         "\n",
+        "            if bib_entry is not None:\n",
+        "                buttons.append(\n",
+        "                    button_copy_to_text(\"Copy .bib\", bib_entry, \"bi-clipboard\")\n",
+        "                )\n",
+        "\n",
         "            pub_strs[\"pubs\"][year_str].append(\n",
         "                \"<li class='list-group-item'>\"\n",
         "                + pub_str\n",
@@ -137,6 +191,10 @@
         "                    button(f\"https://doi.org/{pub_doi}\", \"Published\", \"bi-journal-text\")\n",
         "                )\n",
         "                buttons.append(doi_badge(pub_doi))\n",
+        "            if bib_entry is not None:\n",
+        "                buttons.append(\n",
+        "                    button_copy_to_text(\"Copy .bib\", bib_entry, \"bi-clipboard\")\n",
+        "                )\n",
         "\n",
         "            elif pub_url is not None:\n",
         "                buttons.append(button(pub_url, \"Published\", \"bi-journal-text\"))\n",
@@ -147,6 +205,11 @@
         "                + \" \".join(buttons)\n",
         "                + \"</li>\"\n",
         "            )\n",
+        "\n",
+        "            if bib_entry is not None:\n",
+        "                buttons.append(\n",
+        "                    button_copy_to_text(\"Copy .bib\", bib_entry, \"bi-clipboard\")\n",
+        "                )\n",
         "        else:\n",
         "            if year_str not in pub_strs[\"others\"]:\n",
         "                pub_strs[\"others\"][year_str] = []\n",
@@ -165,10 +228,14 @@
         "                + \" \".join(buttons)\n",
         "                + \"</li>\"\n",
         "            )\n",
+        "            if bib_entry is not None:\n",
+        "                buttons.append(\n",
+        "                    button_copy_to_text(\"Copy .bib\", bib_entry, \"bi-clipboard\")\n",
+        "                )\n",
         "    except Exception as e:\n",
         "        excepts[data[\"id\"]] = e\n"
       ],
-      "id": "199accf0",
+      "id": "22b11754",
       "execution_count": null,
       "outputs": []
     },
@@ -178,7 +245,7 @@
       "source": [
         "## Journal Papers\n"
       ],
-      "id": "f600d121"
+      "id": "577923aa"
     },
     {
       "cell_type": "code",
@@ -202,7 +269,7 @@
       "source": [
         "## Conference Papers\n"
       ],
-      "id": "d0ab231f"
+      "id": "6b12fd8a"
     },
     {
       "cell_type": "code",
@@ -226,7 +293,7 @@
       "source": [
         "## Other Publications\n"
       ],
-      "id": "fd63f96b"
+      "id": "02f5a86b"
     },
     {
       "cell_type": "code",
@@ -250,7 +317,7 @@
       "source": [
         "::: {.content-hidden when-profile=\"production\"}\n"
       ],
-      "id": "6b24353e"
+      "id": "8ffd1308"
     },
     {
       "cell_type": "code",
@@ -267,7 +334,7 @@
         "        )\n",
         "    )"
       ],
-      "id": "09d3f14c",
+      "id": "2b14091e",
       "execution_count": null,
       "outputs": []
     },
@@ -277,7 +344,7 @@
       "source": [
         ":::"
       ],
-      "id": "96013027"
+      "id": "bfccb50c"
     }
   ],
   "metadata": {
@@ -285,7 +352,7 @@
       "name": "python3",
       "language": "python",
       "display_name": "Python 3 (ipykernel)",
-      "path": "/Users/mitch/Documents/GitHub/quarto-website/.venv/share/jupyter/kernels/python3"
+      "path": "/Users/mitch/Documents/Github/quarto-website/.venv/share/jupyter/kernels/python3"
     }
   },
   "nbformat": 4,

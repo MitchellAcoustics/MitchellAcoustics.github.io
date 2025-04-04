@@ -26,8 +26,7 @@ title-slide-attributes:
   data-background-image: https://stat20.berkeley.edu/fall-2024/2-summarizing-data/03-a-grammar-of-graphics/images/plot-collage.png
   data-background-position: right 0% bottom 50%
   data-background-size: 50%
-
-
+  
 engine: knitr
 
 webr:
@@ -76,7 +75,7 @@ R has several systems for making graphs, but `ggplot2` is one of the most elegan
 
 ::: aside
 This presentation is based on the [Data Visualization](https://r4ds.had.co.nz/data-visualisation.html) chapter of the [R for Data Science](https://r4ds.had.co.nz/) book by Hadley Wickham and Garrett Grolemund.
-:::
+::::
 
 ---
 
@@ -107,16 +106,16 @@ intro_p
 ## The Grammar of Graphics
 
 ::: {.columns}
-:::: {.column width="50%"}
+::: {.column width="50%"}
 In 1999, a statistician named Leland Wilkinson published the first edition of what has been the most influential work in data visualization, The Grammar of Graphics.
 
 The most complete implementation of the grammar is found in an R package called `ggplot2` by Hadley Wickham.
 ::::
 
-:::: {.column width="50%"}
+::: {.column width="50%"}
 ![The Grammar of Graphics, Wilkinson (1999)](img/grammar-graphics.png)
 ::::
-:::
+::::
 
 ## The Grammar of Graphics
 ### A plot can be decomposed into three primary elements
@@ -153,8 +152,8 @@ You can type code into the cells and run them by clicking the "Run" button.
 
 ```
 
-:::
-:::
+::::
+::::
 
 
 ## Getting Started
@@ -162,13 +161,13 @@ You can type code into the cells and run them by clicking the "Run" button.
 
 ::: {.colums}
 
-:::: {.column width="50%"}
+::: {.column width="50%"}
 We begin by loading the `tidyverse` and `ggplot2` packages. \
 
 We almost always begin our work by loading the tidyverse package. Note that the terms "package" and "library" are used interchangeably but that there is no package() function. To load a package, you need to use library().
 ::::
 
-:::: {.column .center width="50%"}
+::: {.column .center width="50%"}
 
 ```{webr}
 #| label: getting-started
@@ -180,14 +179,14 @@ We almost always begin our work by loading the tidyverse package. Note that the 
 
 ::::
 
-:::
+::::
 
 ## Getting Started
 ### Loading the Data
 
 ::: {.columns}
 
-:::: {.column width="50%" .center}
+::: {.column width="50%" .center}
 
 Load the `palmerpenguins` package using library(). 
 
@@ -195,7 +194,7 @@ This package contains the `penguins` dataset, which we will use for this tutoria
 
 ::::
 
-:::: {.column width="50%"}
+::: {.column width="50%"}
 
 ```{webr}
 #| autorun: false
@@ -206,7 +205,7 @@ library(palmerpenguins)
 
 ::::
 
-:::
+::::
 
 ## Getting Started
 ### Getting help
@@ -822,18 +821,18 @@ In addition, we can improve the color palette to be colorblind safe with the `sc
 ## Some notes on `ggplot()` calls
 
 ::: {.r-stack}
-:::: {.fragment .fade-out fragment-index="1" .center}
+::: {.fragment .fade-out fragment-index="1" .center}
 So far, we've written the code in a very explicit way, with each argument named. This is a good practice when you're learning, but it can be a bit verbose. \
 ::::
 
-:::: {.fragment fragment-index="1"}
+::: {.fragment fragment-index="1"}
 Typically, the first one or two arguments to a function are so important that you should know them by heart. The first two arguments to `ggplot()` are [**data**]{.fragment .highlight-blue fragment-index="2"} and [**mapping**]{.fragment .highlight-blue fragment-index="2"}. 
 
-::::: {.r-stack}
+::: {.r-stack}
 [You'll often see them left out. This is true for other functions as well.]{.fragment .fade-out fragment-index="4"}
 
 [When leaving the names out, the order of the arguments matters.]{.fragment fragment-index="4"}
-:::::
+:::
 \
 
 ::::

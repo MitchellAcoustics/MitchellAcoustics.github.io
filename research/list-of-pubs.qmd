@@ -27,11 +27,57 @@ def readable_list(_s):
     return f"{', '.join(map(str, a))}, and {b}"
 
 
+def get_bib_entries(bib_file):
+    f = open(bib_file, "r")
+    entries = {}
+    for x in f:
+        if x.strip().startswith("@"):
+            id = x.split("{")[1].split(",")[0]
+            entries[id] = ""
+        elif x.startswith(("}", "\n")):
+            continue
+        elif "Crossref" in x:
+            continue
+        elif x.strip().startswith(
+            (
+                "annotation",
+                "file",
+                "timestamp",
+                "qualityassured",
+                "keywords",
+                "abstract",
+                "TLDR",
+            )
+        ):
+            continue
+        elif x.strip() == "}":
+            continue
+        else:
+            entries[id] += x.strip()
+    f.close()
+    return entries
+
+
+def get_bib_entry(entries, id):
+    try:
+        return entries[id]
+    except:
+        return None
+
+
 def button(url, str, icon):
     icon_base = icon[:2]
     return f"""<a class="btn btn-outline-dark btn-sm", href="{url}" target="_blank" rel="noopener noreferrer">
         <i class="{icon_base} {icon}" role='img' aria-label='{str}'></i>
         {str}
+    </a>"""
+
+
+def button_copy_to_text(label, entry, icon):
+    icon_base = icon[:2]
+    return f"""<a class="btn btn-outline-dark btn-sm" onclick="copyToClipboard('{entry}')">
+        <i class="{icon_base} {icon}" role='img' aria-label='{label}'></i>
+        {label}
     </a>"""
 
 
@@ -49,6 +95,7 @@ def doi_badge(doi_str: str):
 
 me = "Andrew Mitchell"
 yaml_data = yaml.safe_load(open("MitchellPublications.yaml"))
+bib_entries = get_bib_entries("MitchellPublications.bib")
 pub_strs = {"pubs": {}, "confs": {}, "others": {}}
 
 excepts = {}
@@ -85,6 +132,8 @@ for data in yaml_data["references"]:
         journal_pub = entry_type == "article-journal"
         conf_pub = entry_type == "paper-conference"
 
+        bib_entry = get_bib_entry(bib_entries, data["id"])
+
         pub_str = f'{author_str}. ({year_str}) "{title_str}."'
 
         if journal is not None:
@@ -109,6 +158,11 @@ for data in yaml_data["references"]:
             elif pub_url is not None:
                 buttons.append(button(pub_url, "Published", "bi-journal-text"))
 
+            if bib_entry is not None:
+                buttons.append(
+                    button_copy_to_text("Copy .bib", bib_entry, "bi-clipboard")
+                )
+
             pub_strs["pubs"][year_str].append(
                 "<li class='list-group-item'>"
                 + pub_str
@@ -125,6 +179,10 @@ for data in yaml_data["references"]:
                     button(f"https://doi.org/{pub_doi}", "Published", "bi-journal-text")
                 )
                 buttons.append(doi_badge(pub_doi))
+            if bib_entry is not None:
+                buttons.append(
+                    button_copy_to_text("Copy .bib", bib_entry, "bi-clipboard")
+                )
 
             elif pub_url is not None:
                 buttons.append(button(pub_url, "Published", "bi-journal-text"))
@@ -135,6 +193,11 @@ for data in yaml_data["references"]:
                 + " ".join(buttons)
                 + "</li>"
             )
+
+            if bib_entry is not None:
+                buttons.append(
+                    button_copy_to_text("Copy .bib", bib_entry, "bi-clipboard")
+                )
         else:
             if year_str not in pub_strs["others"]:
                 pub_strs["others"][year_str] = []
@@ -153,6 +216,10 @@ for data in yaml_data["references"]:
                 + " ".join(buttons)
                 + "</li>"
             )
+            if bib_entry is not None:
+                buttons.append(
+                    button_copy_to_text("Copy .bib", bib_entry, "bi-clipboard")
+                )
     except Exception as e:
         excepts[data["id"]] = e
 

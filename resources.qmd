@@ -14,10 +14,28 @@ This is my general repository of resources and people I find myself using or rep
 
 - [Happy Git and GitHub for the useR](https://happygitwithr.com)
 
-# Statistics
+# Statistics & Data Analytics
 
+- [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday)
 - [Statistical Modeling, Causal Inference, and Social Science](https://statmodeling.stat.columbia.edu/), blog from Andrew Gelman, mostly focussed on Bayesian and MLM methods.
 - [Michael Clark's blog](https://m-clark.github.io) has some fantastic resources, including in-depth tutorials on [Mixed Models in R](https://m-clark.github.io/mixed-models-with-R/), [Generative Additive Models](https://m-clark.github.io/generalized-additive-models/), [Practical Data Science](https://m-clark.github.io/data-processing-and-visualization/) and [more](https://m-clark.github.io/resources.html)!
+- [Significant Statisics](https://pressbooks.lib.vt.edu/introstatistics/front-matter/preface/), intro textbook from Virginia Tech.
+
+## Datasets
+
+- [Datahub](https://datahub.io)
+- [Open Data - Github](https://github.com/datasets)
+
+### Business & Construction Data
+
+- [UK Construction Statistics Annual Tables](https://www.ons.gov.uk/businessindustryandtrade/constructionindustry/datasets/constructionstatisticsannualtables)
+- [Business datasets for analytics projects](https://www.reddit.com/r/analytics/comments/znd9o2/business_datasets_for_analytics_projects/)
+
+### Environmental & Energy Data
+
+- [HS2 Air Quality and Environmental Monitoring Data](https://www.data.gov.uk/dataset/24542ae7-dd44-444f-b259-871c4cc43b5e/environmental-impact-data)
+- [Energy Performance of Buildings Data: England and Wales](https://epc.opendatacommunities.org)
+- [UC Irvine Energy Efficiency Data](https://archive.ics.uci.edu/dataset/242/energy+efficiency)
 
 ## Multilevel Modelling
 
